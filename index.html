@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glassmorphism Header & Footer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/header.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="./assets/img/logo.png" alt="" srcset="" />
+        </div>
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li class="dropdown">
+            <a href="#services">Services</a>
+            <div class="dropdown-content">
+              <a href="#bar">Bar</a>
+              <a href="#room">Room</a>
+            </div>
+          </li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-slider">
+        <div
+          class="slide active"
+          style="background-image: url(./assets/img/hero1.jpg)"
+        ></div>
+        <div
+          class="slide"
+          style="background-image: url(./assets/img/hero3.jpg)"
+        ></div>
+        <div
+          class="slide"
+          style="background-image: url(./assets/img/hero\ 2.jpg)"
+        ></div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title" id="heroTitle">
+            A Sanctuary of Style & Spirits
+          </h1>
+          <p class="hero-subtitle" id="heroSubtitle">
+            Experience curated comfort and artisanal mixology in the heart of
+            the historic district.
+          </p>
+        </div>
+        <div class="booking-container">
+          <div class="booking-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label>CHECK-IN</label>
+                <div class="input-wrapper">
+                  <i class="far fa-calendar"></i>
+                  <input type="date" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>CHECK-OUT</label>
+                <div class="input-wrapper">
+                  <i class="far fa-calendar"></i>
+                  <input type="date" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>ADULTS</label>
+                <div class="input-wrapper">
+                  <i class="fas fa-user"></i>
+                  <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>CHILDREN</label>
+                <div class="input-wrapper">
+                  <i class="fas fa-child"></i>
+                  <select>
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-submit">
+              <span>Check Availability</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="about-container">
+        <div class="about-content" id="aboutContent">
+          <h2>About Us</h2>
+          <p>
+            Welcome to our sanctuary of style and spirits, where timeless
+            elegance meets modern comfort. Nestled in the heart of the historic
+            district, we pride ourselves on delivering exceptional hospitality
+            and unforgettable experiences.
+          </p>
+          <p>
+            Our passion for excellence is reflected in every detail, from our
+            meticulously crafted interiors to our world-class amenities. Whether
+            you're here for business or pleasure, we're committed to making your
+            stay truly memorable.
+          </p>
+        </div>
+        <div class="about-images" id="aboutImages">
+          <div
+            class="about-img"
+            style="background-image: url(./assets/img/433656146.jpg)"
+          ></div>
+          <div
+            class="about-img"
+            style="background-image: url(./assets/img/433658223.jpg)"
+          ></div>
+          <div
+            class="about-img"
+            style="background-image: url(./assets/img/433659105.jpg)"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+      <div class="services-container">
+        <div class="section-header animate-on-scroll">
+          <div style="position: relative">
+            <span class="section-bg-text">SERVICES</span>
+            <h2 class="section-title">Our Services</h2>
+          </div>
+          <p class="section-subtitle">
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt
+          </p>
+        </div>
+
+        <div class="service-cards">
+          <div class="service-card animate-scale stagger-1">
+            <div
+              class="service-card-image"
+              style="background-image: url(./assets/img/444027618.jpg)"
+            ></div>
+            <div class="service-card-content">
+              <h3>Guest Rooms</h3>
+              <p>Luxurious accommodations designed for your ultimate comfort</p>
+            </div>
+          </div>
+
+          <div class="service-card animate-scale stagger-2">
+            <div
+              class="service-card-image"
+              style="background-image: url(./assets/img/444028406.jpg)"
+            ></div>
+            <div class="service-card-content">
+              <h3>Restaurant</h3>
+              <p>Exquisite cuisine crafted by world-class chefs</p>
+            </div>
+          </div>
+
+          <div class="service-card animate-scale stagger-3">
+            <div
+              class="service-card-image"
+              style="background-image: url(./assets/img/444030405.jpg)"
+            ></div>
+            <div class="service-card-content">
+              <h3>Bar</h3>
+              <p>Artisanal cocktails in an intimate setting</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section class="rooms-section">
+      <div class="services-container">
+        <div class="section-header animate-on-scroll">
+          <div style="position: relative">
+            <span class="section-bg-text">ROOMS</span>
+            <h2 class="section-title">Our Rooms</h2>
+          </div>
+          <p class="section-subtitle">
+            Discover your perfect sanctuary with our luxurious accommodations
+          </p>
+        </div>
+
+        <div class="room-cards">
+          <div class="room-card animate-on-scroll stagger-1">
+            <div
+              class="room-image"
+              style="background-image: url(./assets/img/444030934.jpg)"
+            ></div>
+            <div class="room-details">
+              <div class="room-header">
+                <h3>Deluxe Room</h3>
+                <div class="room-price">
+                  <span class="price">$150</span>
+                  <span class="per-night">/night</span>
+                </div>
+              </div>
+              <div class="room-features">
+                <span><i class="fas fa-bed"></i> 1 King Bed</span>
+                <span><i class="fas fa-users"></i> 2 Guests</span>
+                <span><i class="fas fa-wifi"></i> Free WiFi</span>
+              </div>
+              <p class="room-description">
+                Elegant room featuring modern amenities, luxury bedding, and
+                stunning city views.
+              </p>
+              <a href="#" class="book-btn">Book Now</a>
+            </div>
+          </div>
+
+          <div class="room-card animate-on-scroll stagger-2">
+            <div
+              class="room-image"
+              style="background-image: url(./assets/img/444041974.jpg)"
+            ></div>
+            <div class="room-details">
+              <div class="room-header">
+                <h3>Executive Suite</h3>
+                <div class="room-price">
+                  <span class="price">$250</span>
+                  <span class="per-night">/night</span>
+                </div>
+              </div>
+              <div class="room-features">
+                <span><i class="fas fa-bed"></i> 1 King Bed</span>
+                <span><i class="fas fa-users"></i> 3 Guests</span>
+                <span><i class="fas fa-wifi"></i> Free WiFi</span>
+              </div>
+              <p class="room-description">
+                Spacious suite with separate living area, premium furnishings,
+                and exclusive amenities.
+              </p>
+              <a href="#" class="book-btn">Book Now</a>
+            </div>
+          </div>
+
+          <div class="room-card animate-on-scroll stagger-3">
+            <div
+              class="room-image"
+              style="background-image: url(./assets/img/444030934.jpg)"
+            ></div>
+            <div class="room-details">
+              <div class="room-header">
+                <h3>Presidential Suite</h3>
+                <div class="room-price">
+                  <span class="price">$450</span>
+                  <span class="per-night">/night</span>
+                </div>
+              </div>
+              <div class="room-features">
+                <span><i class="fas fa-bed"></i> 2 King Beds</span>
+                <span><i class="fas fa-users"></i> 4 Guests</span>
+                <span><i class="fas fa-wifi"></i> Free WiFi</span>
+              </div>
+              <p class="room-description">
+                Ultimate luxury with panoramic views, private balcony, and
+                personalized concierge service.
+              </p>
+              <a href="#" class="book-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bar & Restaurant Full Section -->
+    <section class="bar-restaurant">
+      <div
+        class="bar-bg"
+        style="background-image: url(./assets/img/444048203.jpg)"
+      ></div>
+      <div class="bar-overlay"></div>
+      <div class="bar-content">
+        <h2 class="bar-title">Bar & Restaurant</h2>
+        <a href="#" class="menu-link">View Menu</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>
+            We provide exceptional services with a focus on quality and customer
+            satisfaction.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#bar">Bar</a></li>
+            <li><a href="#room">Room</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <p>Email: info@example.com</p>
+          <p>Phone: +1 234 567 890</p>
+          <p>Address: 123 Street, City, Country</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Your Company. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-btn">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <script src="./assets/js/header.js"></script>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>
