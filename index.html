@@ -16,7 +16,9 @@
     <header>
       <nav>
         <div class="logo">
-          <img src="./assets/img/logo.png" alt="" srcset="" />
+          <a href="">
+            <img src="./assets/img/logo.png" alt="" srcset="" />
+          </a>
         </div>
 
         <div class="menu-toggle" onclick="toggleMenu()">
@@ -26,13 +28,15 @@
         </div>
 
         <ul class="nav-links" id="navLinks">
-          <li><a class="active" href="#home">Home</a></li>
-          <li><a href="#about">About Us</a></li>
+          <li><a class="active" href="">Home</a></li>
+          <li><a href="./pages/about.html">About Us</a></li>
           <li class="dropdown">
-            <a href="#services">Services</a>
+            <a href="./pages/rooms.html"
+              >Services <i class="fas fa-chevron-down"></i
+            ></a>
             <div class="dropdown-content">
-              <a href="#bar">Bar</a>
-              <a href="#room">Room</a>
+              <a href="./pages/bar.html">Bar</a>
+              <a href="./pages/rooms.html">Room</a>
             </div>
           </li>
           <li><a href="./pages/contactus.html">Contact Us</a></li>
@@ -40,274 +44,411 @@
       </nav>
     </header>
     <!-- Hero Section -->
+    <!-- Hero Section with Slider -->
     <section class="hero">
       <div class="hero-slider">
         <div
-          class="slide active"
+          class="hero-slide active"
           style="background-image: url(./assets/img/hero1.jpg)"
         ></div>
         <div
-          class="slide"
+          class="hero-slide"
           style="background-image: url(./assets/img/hero3.jpg)"
         ></div>
         <div
-          class="slide"
+          class="hero-slide"
           style="background-image: url(./assets/img/hero\ 2.jpg)"
         ></div>
       </div>
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1 class="hero-title" id="heroTitle">
-            A Sanctuary of Style & Spirits
-          </h1>
-          <p class="hero-subtitle" id="heroSubtitle">
-            Experience curated comfort and artisanal mixology in the heart of
-            the historic district.
-          </p>
-        </div>
-        <div class="booking-container">
-          <div class="booking-form">
-            <div class="form-row">
-              <div class="form-group">
-                <label>CHECK-IN</label>
-                <div class="input-wrapper">
-                  <i class="far fa-calendar"></i>
-                  <input type="date" />
+
+      <div class="slider-arrow prev" onclick="changeSlide(-1)">
+        <i class="fas fa-chevron-left"></i>
+      </div>
+      <div class="slider-arrow next" onclick="changeSlide(1)">
+        <i class="fas fa-chevron-right"></i>
+      </div>
+
+      <div class="hero-content active" data-slide="0">
+        <div class="stars">☆☆☆☆☆</div>
+        <h1>Comfort Rooms</h1>
+        <button class="btn-primary">Book A Room</button>
+      </div>
+      <div class="hero-content" data-slide="1">
+        <div class="stars">★★★★★</div>
+        <h1>Luxury Suite</h1>
+        <button class="btn-primary">Book This Suite</button>
+      </div>
+      <div class="hero-content" data-slide="2">
+        <div class="stars">★★★★☆</div>
+        <h1>Family Room</h1>
+        <button class="btn-primary">Book This Room</button>
+      </div>
+
+      <div class="slider-nav">
+        <span class="slider-dot active" onclick="goToSlide(0)"></span>
+        <span class="slider-dot" onclick="goToSlide(1)"></span>
+        <span class="slider-dot" onclick="goToSlide(2)"></span>
+      </div>
+    </section>
+
+    <!-- Booking Bar -->
+    <div class="booking-bar fade-in">
+      <div class="booking-field">
+        <label>Email</label>
+        <input type="email" placeholder="Please enter your E-mail" />
+      </div>
+      <div class="booking-field">
+        <label
+          >Room Type
+          <i class="fas fa-info-circle" style="font-size: 11px; color: #ccc"></i
+        ></label>
+        <select>
+          <option>Select a room</option>
+          <option>Double Bedroom</option>
+          <option>King Size Bedroom</option>
+          <option>Single Room</option>
+        </select>
+      </div>
+      <div class="booking-field">
+        <label
+          >Check-in
+          <i class="fas fa-info-circle" style="font-size: 11px; color: #ccc"></i
+        ></label>
+        <input type="date" />
+      </div>
+      <div class="booking-field">
+        <label
+          >Check-out
+          <i class="fas fa-info-circle" style="font-size: 11px; color: #ccc"></i
+        ></label>
+        <input type="date" />
+      </div>
+      <div class="booking-field">
+        <label>Guests</label>
+        <input type="number" min="1" value="1" />
+      </div>
+      <button class="btn-book">Book Now</button>
+    </div>
+
+    <!-- Guests Favorite Rooms -->
+    <section class="container">
+      <h2 class="section-title fade-in">Guests Favorite Rooms</h2>
+      <div class="rooms-grid">
+        <div
+          class="room-card scale-in stagger-animation"
+          style="--stagger-delay: 1"
+        >
+          <div
+            class="room-image"
+            style="background-image: url(./assets/img/room1.jpg)"
+          >
+            <div class="room-details">
+              <h4>Comfortable Double Room at Auberge La Caverne</h4>
+              <div class="room-features">
+                <div class="room-feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Incl. breakfast</span>
+                </div>
+                <div class="room-feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Free Wi-Fi</span>
+                </div>
+                <div class="room-feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Private Sitting room</span>
+                </div>
+                <div class="room-feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Hot bath</span>
                 </div>
               </div>
-              <div class="form-group">
-                <label>CHECK-OUT</label>
-                <div class="input-wrapper">
-                  <i class="far fa-calendar"></i>
-                  <input type="date" />
-                </div>
-              </div>
-              <div class="form-group">
-                <label>ADULTS</label>
-                <div class="input-wrapper">
-                  <i class="fas fa-user"></i>
-                  <select>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <label>CHILDREN</label>
-                <div class="input-wrapper">
-                  <i class="fas fa-child"></i>
-                  <select>
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                  </select>
-                </div>
-              </div>
+              <button class="btn-read-more">Read More</button>
             </div>
-            <div class="form-submit">
-              <span>Check Availability</span>
-              <i class="fas fa-arrow-right"></i>
+          </div>
+          <div class="room-info">
+            <div class="room-title">Double bedroom</div>
+            <div class="room-price">
+              25000 RWF
+              <span>a night</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="room-card scale-in stagger-animation"
+          style="--stagger-delay: 2"
+        >
+          <div
+            class="room-image"
+            style="background-image: url(./assets/img/room2.jpg)"
+          >
+            <div class="room-details">
+              <h4>Spacious King Size Room</h4>
+              <div class="room-features">
+                <div class="room-feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Incl. breakfast</span>
+                </div>
+                <div class="room-feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Free Wi-Fi</span>
+                </div>
+                <div class="room-feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>sitting room</span>
+                </div>
+                <div class="room-feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Bathroom</span>
+                </div>
+              </div>
+              <button class="btn-read-more">Read More</button>
+            </div>
+          </div>
+          <div class="room-info">
+            <div class="room-title">King Size Bedroom</div>
+            <div class="room-price">
+              20000 RWF
+              <span>a night</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="room-card scale-in stagger-animation"
+          style="--stagger-delay: 3"
+        >
+          <div
+            class="room-image"
+            style="background-image: url(./assets/img/room4.jpg)"
+          >
+            <div class="room-details">
+              <h4>Cozy Single Room Retreat</h4>
+              <div class="room-features">
+                <div class="room-feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Incl. breakfast</span>
+                </div>
+                <div class="room-feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Free Wi-Fi</span>
+                </div>
+                <div class="room-feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Sitting room</span>
+                </div>
+                <div class="room-feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Bathroom</span>
+                </div>
+              </div>
+              <button class="btn-read-more">Read More</button>
+            </div>
+          </div>
+          <div class="room-info">
+            <div class="room-title">Single room</div>
+            <div class="room-price">
+              30000 RWF
+              <span>a night</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about-section">
-      <div class="about-container">
-        <div class="about-content" id="aboutContent">
-          <h2>About Us</h2>
-          <p>
-            Welcome to our sanctuary of style and spirits, where timeless
-            elegance meets modern comfort. Nestled in the heart of the historic
-            district, we pride ourselves on delivering exceptional hospitality
-            and unforgettable experiences.
-          </p>
-          <p>
-            Our passion for excellence is reflected in every detail, from our
-            meticulously crafted interiors to our world-class amenities. Whether
-            you're here for business or pleasure, we're committed to making your
-            stay truly memorable.
-          </p>
-        </div>
-        <div class="about-images" id="aboutImages">
+    <!-- USP Section -->
+    <section class="usp-section">
+      <div class="container">
+        <h2 class="section-title fade-in">Why Choose Us</h2>
+        <div class="usp-grid">
           <div
-            class="about-img"
-            style="background-image: url(./assets/img/433656146.jpg)"
+            class="usp-card fade-in stagger-animation"
+            style="--stagger-delay: 1"
+          >
+            <div class="usp-icon"><i class="fas fa-wine-glass-alt"></i></div>
+            <h3 class="usp-title">Complimentary Breakfast</h3>
+            <p class="usp-description">
+              Start your day with our delicious complimentary breakfast
+              featuring local Rwandan specialties, fresh fruits, and freshly
+              brewed coffee. Enjoy a hearty meal to fuel your adventures.
+            </p>
+            <a href="#" class="read-more">Read more »</a>
+          </div>
+          <div
+            class="usp-card fade-in stagger-animation"
+            style="--stagger-delay: 2"
+          >
+            <div class="usp-icon"><i class="fas fa-calendar-check"></i></div>
+            <h3 class="usp-title">Flexible Payment Options</h3>
+            <p class="usp-description">
+              We offer convenient payment options including cash, mobile money,
+              and credit cards. Pay upon arrival or arrange flexible payment
+              plans for extended stays.
+            </p>
+            <a href="#" class="read-more">Read more »</a>
+          </div>
+          <div
+            class="usp-card fade-in stagger-animation"
+            style="--stagger-delay: 3"
+          >
+            <div class="usp-icon"><i class="fas fa-utensils"></i></div>
+            <h3 class="usp-title">24/7 Concierge Service</h3>
+            <p class="usp-description">
+              Our dedicated concierge team is available around the clock to
+              assist with transportation, tour bookings, restaurant
+              recommendations, and any other needs during your stay.
+            </p>
+            <a href="#" class="read-more">Read more »</a>
+          </div>
+          <div
+            class="usp-card fade-in stagger-animation"
+            style="--stagger-delay: 4"
+          >
+            <div class="usp-icon"><i class="fas fa-spa"></i></div>
+            <h3 class="usp-title">Peaceful Mountain Setting</h3>
+            <p class="usp-description">
+              Nestled in the serene mountains, Auberge La Caverne offers
+              breathtaking views and a tranquil atmosphere perfect for
+              relaxation and rejuvenation. Experience nature's beauty right at
+              your doorstep.
+            </p>
+            <a href="#" class="read-more">Read more »</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+      <div class="stars">Auberge La Caverne</div>
+      <h2>your home away from home!</h2>
+      <button class="btn-white">Checkout the Our rooms</button>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery-section">
+      <div class="container">
+        <h2 class="section-title fade-in">Gallery</h2>
+      </div>
+      <div class="gallery-wrapper">
+        <div class="gallery-grid">
+          <div
+            class="gallery-item"
+            style="background-image: url(./assets/img/444041974.jpg)"
           ></div>
           <div
-            class="about-img"
-            style="background-image: url(./assets/img/433658223.jpg)"
+            class="gallery-item"
+            style="background-image: url(./assets/img/sittingroom3.jpg)"
           ></div>
           <div
-            class="about-img"
-            style="background-image: url(./assets/img/433659105.jpg)"
+            class="gallery-item"
+            style="background-image: url(./assets/img/outside5.jpg)"
+          ></div>
+          <div
+            class="gallery-item"
+            style="background-image: url(./assets/img/dining.jpg)"
+          ></div>
+          <div
+            class="gallery-item"
+            style="background-image: url(./assets/img/444042028.jpg)"
+          ></div>
+          <div
+            class="gallery-item"
+            style="background-image: url(./assets/img/444048466.jpg)"
+          ></div>
+          <div
+            class="gallery-item"
+            style="background-image: url(./assets/img/outside.jpg)"
+          ></div>
+          <div
+            class="gallery-item"
+            style="background-image: url(./assets/img/sittingroom3.jpg)"
           ></div>
         </div>
       </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services-section">
-      <div class="services-container">
-        <div class="section-header animate-on-scroll">
-          <div style="position: relative">
-            <span class="section-bg-text">SERVICES</span>
-            <h2 class="section-title">Our Services</h2>
-          </div>
-          <p class="section-subtitle">
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt
-          </p>
-        </div>
-
-        <div class="service-cards">
-          <div class="service-card animate-scale stagger-1">
-            <div
-              class="service-card-image"
-              style="background-image: url(./assets/img/444027618.jpg)"
-            ></div>
-            <div class="service-card-content">
-              <h3>Guest Rooms</h3>
-              <p>Luxurious accommodations designed for your ultimate comfort</p>
-            </div>
-          </div>
-
-          <div class="service-card animate-scale stagger-2">
-            <div
-              class="service-card-image"
-              style="background-image: url(./assets/img/444028406.jpg)"
-            ></div>
-            <div class="service-card-content">
-              <h3>Restaurant</h3>
-              <p>Exquisite cuisine crafted by world-class chefs</p>
-            </div>
-          </div>
-
-          <div class="service-card animate-scale stagger-3">
-            <div
-              class="service-card-image"
-              style="background-image: url(./assets/img/444030405.jpg)"
-            ></div>
-            <div class="service-card-content">
-              <h3>Bar</h3>
-              <p>Artisanal cocktails in an intimate setting</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Rooms Section -->
-    <section class="rooms-section">
-      <div class="services-container">
-        <div class="section-header animate-on-scroll">
-          <div style="position: relative">
-            <span class="section-bg-text">ROOMS</span>
-            <h2 class="section-title">Our Rooms</h2>
-          </div>
-          <p class="section-subtitle">
-            Discover your perfect sanctuary with our luxurious accommodations
-          </p>
-        </div>
-
-        <div class="room-cards">
-          <div class="room-card animate-on-scroll stagger-1">
-            <div
-              class="room-image"
-              style="background-image: url(./assets/img/444030934.jpg)"
-            ></div>
-            <div class="room-details">
-              <div class="room-header">
-                <h3>Deluxe Room</h3>
-                <div class="room-price">
-                  <span class="price">$150</span>
-                  <span class="per-night">/night</span>
-                </div>
+    <!-- Testimonials & Hotel Tabs -->
+    <section class="testimonials-section">
+      <div class="testimonials-container">
+        <div class="testimonials-left fade-in-left">
+          <h2 class="testimonials-title">What Other Visitors Experienced</h2>
+          <div class="testimonial-card">
+            <div class="testimonial-avatar">JD</div>
+            <div class="testimonial-content">
+              <div class="testimonial-info">
+                <h4>John Doe</h4>
+                <div class="stars-small">★★★★★</div>
               </div>
-              <div class="room-features">
-                <span><i class="fas fa-bed"></i> 1 King Bed</span>
-                <span><i class="fas fa-users"></i> 2 Guests</span>
-                <span><i class="fas fa-wifi"></i> Free WiFi</span>
-              </div>
-              <p class="room-description">
-                Elegant room featuring modern amenities, luxury bedding, and
-                stunning city views.
+              <p class="testimonial-text">
+                Searched the internet and I found, looked and visited me from
+                that I like to call magic.
               </p>
-              <a href="#" class="book-btn">Book Now</a>
             </div>
           </div>
-
-          <div class="room-card animate-on-scroll stagger-2">
-            <div
-              class="room-image"
-              style="background-image: url(./assets/img/444041974.jpg)"
-            ></div>
-            <div class="room-details">
-              <div class="room-header">
-                <h3>Executive Suite</h3>
-                <div class="room-price">
-                  <span class="price">$250</span>
-                  <span class="per-night">/night</span>
-                </div>
+          <div class="testimonial-card">
+            <div class="testimonial-avatar">ES</div>
+            <div class="testimonial-content">
+              <div class="testimonial-info">
+                <h4>Emily Stewart</h4>
+                <div class="stars-small">★★★★★</div>
               </div>
-              <div class="room-features">
-                <span><i class="fas fa-bed"></i> 1 King Bed</span>
-                <span><i class="fas fa-users"></i> 3 Guests</span>
-                <span><i class="fas fa-wifi"></i> Free WiFi</span>
-              </div>
-              <p class="room-description">
-                Spacious suite with separate living area, premium furnishings,
-                and exclusive amenities.
+              <p class="testimonial-text">
+                I give it 5 out of 5! Great hotel, friendly staff, clean,
+                relaxing... You I'm coming back!
               </p>
-              <a href="#" class="book-btn">Book Now</a>
-            </div>
-          </div>
-
-          <div class="room-card animate-on-scroll stagger-3">
-            <div
-              class="room-image"
-              style="background-image: url(./assets/img/444030934.jpg)"
-            ></div>
-            <div class="room-details">
-              <div class="room-header">
-                <h3>Presidential Suite</h3>
-                <div class="room-price">
-                  <span class="price">$450</span>
-                  <span class="per-night">/night</span>
-                </div>
-              </div>
-              <div class="room-features">
-                <span><i class="fas fa-bed"></i> 2 King Beds</span>
-                <span><i class="fas fa-users"></i> 4 Guests</span>
-                <span><i class="fas fa-wifi"></i> Free WiFi</span>
-              </div>
-              <p class="room-description">
-                Ultimate luxury with panoramic views, private balcony, and
-                personalized concierge service.
-              </p>
-              <a href="#" class="book-btn">Book Now</a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Bar & Restaurant Full Section -->
-    <section class="bar-restaurant">
-      <div
-        class="bar-bg"
-        style="background-image: url(./assets/img/444048203.jpg)"
-      ></div>
-      <div class="bar-overlay"></div>
-      <div class="bar-content">
-        <h2 class="bar-title">Bar & Restaurant</h2>
-        <a href="#" class="menu-link">View Menu</a>
+        <div class="hotel-tabs fade-in-right">
+          <h2 class="testimonials-title">About Auberge La Caverne</h2>
+          <div class="tabs-header">
+            <div class="tab active" data-tab="1">Our Guesthouse</div>
+            <div class="tab" data-tab="2">Events</div>
+            <div class="tab" data-tab="3">Kids</div>
+          </div>
+          <div class="tab-content active" data-content="1">
+            <p>
+              Auberge La Caverne is a charming guesthouse located in the heart
+              of Rwanda's scenic landscapes. Our establishment offers
+              comfortable accommodations with modern amenities while preserving
+              the authentic Rwandan hospitality. Each room is thoughtfully
+              designed to provide comfort and convenience for our guests.
+            </p>
+            <p>
+              Whether you're visiting for business, leisure, or exploring
+              Rwanda's natural wonders, our guesthouse provides the perfect
+              base. Enjoy stunning mountain views, delicious local cuisine, and
+              personalized service that makes you feel right at home.
+            </p>
+          </div>
+          <div class="tab-content" data-content="2">
+            <p>
+              Discover exciting events at our hotel! From weddings to corporate
+              gatherings, we offer exceptional venues and services to make your
+              special occasions unforgettable. Our experienced team ensures
+              everything runs smoothly.
+            </p>
+            <p>
+              Whether it's a birthday party, conference, or holiday celebration,
+              our flexible spaces and catering options cater to all your needs.
+              Contact us to plan your next event.
+            </p>
+          </div>
+          <div class="tab-content" data-content="3">
+            <p>
+              Family-friendly accommodations with special amenities for kids.
+              Enjoy our kids' club, playground, and family suites designed for
+              comfort and fun. We provide cribs, high chairs, and child-safe
+              environments.
+            </p>
+            <p>
+              Our hotel offers babysitting services, kids' menus, and activities
+              to keep the little ones entertained while parents relax. Perfect
+              for a memorable family vacation.
+            </p>
+          </div>
+          <div class="tab-image"></div>
+        </div>
       </div>
     </section>
 
@@ -317,8 +458,9 @@
         <div class="footer-section">
           <h3>About Us</h3>
           <p>
-            We provide exceptional services with a focus on quality and customer
-            satisfaction.
+            Auberge La Caverne is your home away from home in Rwanda. We offer
+            comfortable accommodations, authentic hospitality, and unforgettable
+            experiences in a serene mountain setting.
           </p>
         </div>
         <div class="footer-section">
@@ -348,6 +490,9 @@
         <p>&copy; 2026 Your Company. All rights reserved.</p>
       </div>
     </footer>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container"></div>
 
     <!-- WhatsApp Button -->
     <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-btn">

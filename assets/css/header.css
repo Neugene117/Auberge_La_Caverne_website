@@ -31,6 +31,11 @@ nav {
   height: 100%;
 }
 
+.logo a {
+  text-decoration: none;
+  display: block;
+}
+
 .nav-links {
   display: flex;
   list-style: none;
@@ -119,6 +124,16 @@ nav {
 
 .dropdown-content a::after {
   display: none;
+}
+
+.dropdown a i {
+  margin-left: 5px;
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover a i {
+  transform: rotate(180deg);
 }
 
 /* Mobile Menu Toggle */
