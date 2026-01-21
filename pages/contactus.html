@@ -1,18 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Contact Us</title>
-    <link rel="stylesheet" href="../assets/css/header.css">
-    <link rel="stylesheet" href="../assets/css/contactus.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
- <!-- Header -->
+    <link rel="stylesheet" href="../assets/css/header.css" />
+    <link rel="stylesheet" href="../assets/css/contactus.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
     <header>
       <nav>
         <div class="logo">
-          <img src="../assets/img/logo.png" alt="" srcset="" />
+          <a href="../index.html">
+            <img src="../assets/img/logo.png" alt="" srcset="" />
+          </a>
         </div>
 
         <div class="menu-toggle" onclick="toggleMenu()">
@@ -22,135 +27,145 @@
         </div>
 
         <ul class="nav-links" id="navLinks">
-          <li><a class="active" href="#home">Home</a></li>
-          <li><a href="#about">About Us</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../pages/about.html">About Us</a></li>
           <li class="dropdown">
-            <a href="#services">Services</a>
+            <a href="../pages/rooms.html"
+              >Services <i class="fas fa-chevron-down"></i
+            ></a>
             <div class="dropdown-content">
-              <a href="#bar">Bar</a>
-              <a href="#room">Room</a>
+              <a href="../pages/bar.html">Bar</a>
+              <a href="../pages/rooms.html">Room</a>
             </div>
           </li>
-          <li><a href="./pages/contactus.html">Contact Us</a></li>
+          <li><a class="active" href="contactus.html">Contact Us</a></li>
         </ul>
       </nav>
     </header>
-<section class="contact-section">
-    <h2 class="title">Contact Us</h2>
-    <span class="underline"></span>
 
-    <div class="contact-container">
+    <!-- Hero Section -->
+    <section class="contact-hero">
+      <div class="hero-overlay">
+        <h1>Contact Us</h1>
+        <p>Get in touch with Auberge La Caverne</p>
+      </div>
+    </section>
 
+    <section class="contact-section">
+      <h2 class="title">Contact Us</h2>
+      <span class="underline"></span>
+
+      <div class="contact-container">
         <!-- LEFT SIDE -->
         <div class="contact-left">
-            <h3>Get In Touch</h3>
+          <h3>Get In Touch</h3>
 
-            <div class="info">
-                <i class="fa fa-location-dot"></i>
-                <div>
-                    <strong>Our Location</strong>
-                    <p>Kigali, Rwanda</p>
-                </div>
+          <div class="info">
+            <i class="fa fa-location-dot"></i>
+            <div>
+              <strong>Our Location</strong>
+              <p>Kigali, Rwanda</p>
             </div>
+          </div>
 
-            <div class="info">
-                <i class="fa fa-phone"></i>
-                <div>
-                    <strong>Phone Number</strong>
-                    <p>0785750117</p>
-                </div>
+          <div class="info">
+            <i class="fa fa-phone"></i>
+            <div>
+              <strong>Phone Number</strong>
+              <p>0785750117</p>
             </div>
+          </div>
 
-            <div class="info">
-                <i class="fa fa-envelope"></i>
-                <div>
-                    <strong>Email Address</strong>
-                    <p>aubergecaverne@gmail.com</p>
-                </div>
+          <div class="info">
+            <i class="fa fa-envelope"></i>
+            <div>
+              <strong>Email Address</strong>
+              <p>aubergecaverne@gmail.com</p>
             </div>
+          </div>
 
-            <div class="info">
-                <i class="fa fa-user"></i>
-                <div>
-                    <strong>Owner</strong>
-                    <p>NDAYISHIMIYE Eugene<br>Auberge La Caverne</p>
-                </div>
+          <div class="info">
+            <i class="fa fa-user"></i>
+            <div>
+              <strong>Owner</strong>
+              <p>NDAYISHIMIYE Eugene<br />Auberge La Caverne</p>
             </div>
+          </div>
 
-            <h4>Follow Us</h4>
-            <div class="socials">
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-linkedin-in"></i>
-                <i class="fab fa-instagram"></i>
-            </div>
+          <h4>Follow Us</h4>
+          <div class="socials">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fab fa-instagram"></i>
+          </div>
 
-            <div class="hours">
-                <h4>Business Hours</h4>
-                <p>Monday - Friday: <span>8:00 AM - 5:00 PM</span></p>
-                <p>Saturday: <span>9:00 AM - 1:00 PM</span></p>
-                <p>Sunday: <span>Closed</span></p>
-            </div>
+          <div class="hours">
+            <h4>Business Hours</h4>
+            <p>Monday - Friday: <span>8:00 AM - 5:00 PM</span></p>
+            <p>Saturday: <span>9:00 AM - 1:00 PM</span></p>
+            <p>Sunday: <span>Closed</span></p>
+          </div>
         </div>
 
         <!-- RIGHT SIDE -->
         <div class="contact-right">
-            <h3>Send Us A Message</h3>
-            <p class="desc">
-                Have questions about our guesthouse, bar, or lodge? Fill out the form below
-                and we'll get back to you as soon as possible.
-            </p>
+          <h3>Send Us A Message</h3>
+          <p class="desc">
+            Have questions about our guesthouse, bar, or lodge? Fill out the
+            form below and we'll get back to you as soon as possible.
+          </p>
 
-            <form id="contactForm">
-                <div class="row">
-                    <div class="input-group">
-                        <label>Your Name</label>
-                        <input type="text" placeholder="Enter your name" required>
-                    </div>
+          <form id="contactForm">
+            <div class="row">
+              <div class="input-group">
+                <label>Your Name</label>
+                <input type="text" placeholder="Enter your name" required />
+              </div>
 
-                    <div class="input-group">
-                        <label>Email Address</label>
-                        <input type="email" placeholder="Enter your email" required>
-                    </div>
-                </div>
+              <div class="input-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="Enter your email" required />
+              </div>
+            </div>
 
-                <div class="row">
-                    <div class="input-group">
-                        <label>Phone Number</label>
-                        <input type="text" placeholder="Enter your phone number">
-                    </div>
+            <div class="row">
+              <div class="input-group">
+                <label>Phone Number</label>
+                <input type="text" placeholder="Enter your phone number" />
+              </div>
 
-                    <div class="input-group">
-                        <label>Subject</label>
-                        <input type="text" placeholder="Enter subject">
-                    </div>
-                </div>
+              <div class="input-group">
+                <label>Subject</label>
+                <input type="text" placeholder="Enter subject" />
+              </div>
+            </div>
 
-                <div class="input-group">
-                    <label>Service Interested In</label>
-                    <select>
-                        <option>Select a service</option>
-                        <option>Room Booking</option>
-                        <option>Bar Reservation</option>
-                        <option>Event Hosting</option>
-                        <option>General Inquiry</option>
-                    </select>
-                </div>
+            <div class="input-group">
+              <label>Service Interested In</label>
+              <select>
+                <option>Select a service</option>
+                <option>Room Booking</option>
+                <option>Bar Reservation</option>
+                <option>Event Hosting</option>
+                <option>General Inquiry</option>
+              </select>
+            </div>
 
-                <div class="input-group">
-                    <label>Your Message</label>
-                    <textarea placeholder="Type your message here..."></textarea>
-                </div>
+            <div class="input-group">
+              <label>Your Message</label>
+              <textarea placeholder="Type your message here..."></textarea>
+            </div>
 
-                <button type="submit">
-                    <i class="fa fa-paper-plane"></i> Send Message
-                </button>
-            </form>
+            <button type="submit">
+              <i class="fa fa-paper-plane"></i> Send Message
+            </button>
+          </form>
         </div>
+      </div>
+    </section>
 
-    </div>
-</section>
-
-<script src="../assets/js/contactus.js"></script>
-</body>
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/contactus.js"></script>
+  </body>
 </html>
