@@ -65,7 +65,7 @@ nav {
 }
 
 .nav-links a:hover {
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 .nav-links a:hover::after {
@@ -75,7 +75,7 @@ nav {
 
 .nav-links a:active,
 .nav-links a.active {
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 .nav-links a:active::after,
