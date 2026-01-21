@@ -92,7 +92,7 @@
     </section>
 
     <!-- Booking Bar -->
-    <div class="booking-bar fade-in">
+    <form class="booking-bar fade-in">
       <div class="booking-field">
         <label>Email</label>
         <input type="email" placeholder="Please enter your E-mail" />
@@ -128,132 +128,101 @@
         <input type="number" min="1" value="1" />
       </div>
       <button class="btn-book">Book Now</button>
-    </div>
+    </form>
+    <!-- room cards section -->
+    <section class="rooms-section">
+      <div class="container">
+        <h2 class="section-title fade-in">Our Rooms</h2>
+        <div class="cards-grid">
+          <!-- Card 1 -->
+          <div
+            class="property-card fade-in stagger-animation"
+            style="--stagger-delay: 1"
+          >
+            <div class="card-image">
+              <img src="./assets/img/room1.jpg" alt="House" />
+              <div class="status-badge">Available</div>
+            </div>
+            <div class="card-content">
+              <div class="type-badge">SINGLE</div>
+              <div class="price">30,000 Rwf</div>
+              <h3 class="title">Single Bedroom</h3>
+              <div class="location">
+                <i class="fas fa-check-circle"></i>
+                Breakfast and Free Wifi included
+              </div>
 
-    <!-- Guests Favorite Rooms -->
-    <section class="container">
-      <h2 class="section-title fade-in">Guests Favorite Rooms</h2>
-      <div class="rooms-grid">
-        <div
-          class="room-card scale-in stagger-animation"
-          style="--stagger-delay: 1"
-        >
-          <div
-            class="room-image"
-            style="background-image: url(./assets/img/room1.jpg)"
-          >
-            <div class="room-details">
-              <h4>Comfortable Double Room at Auberge La Caverne</h4>
-              <div class="room-features">
-                <div class="room-feature">
-                  <i class="fas fa-check-circle"></i>
-                  <span>Incl. breakfast</span>
+              <div class="card-details">
+                <div class="detail-item">
+                  <button class="btn-read-more">Book Now</button>
                 </div>
-                <div class="room-feature">
-                  <i class="fas fa-check-circle"></i>
-                  <span>Free Wi-Fi</span>
-                </div>
-                <div class="room-feature">
-                  <i class="fas fa-check-circle"></i>
-                  <span>Private Sitting room</span>
-                </div>
-                <div class="room-feature">
-                  <i class="fas fa-check-circle"></i>
-                  <span>Hot bath</span>
+                <div class="detail-item">
+                  <button class="btn-read-more">Read More</button>
                 </div>
               </div>
-              <button class="btn-read-more">Read More</button>
             </div>
           </div>
-          <div class="room-info">
-            <div class="room-title">Double bedroom</div>
-            <div class="room-price">
-              25000 RWF
-              <span>a night</span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="room-card scale-in stagger-animation"
-          style="--stagger-delay: 2"
-        >
+
+          <!-- Card 2 -->
           <div
-            class="room-image"
-            style="background-image: url(./assets/img/room2.jpg)"
+            class="property-card fade-in stagger-animation"
+            style="--stagger-delay: 2"
           >
-            <div class="room-details">
-              <h4>Spacious King Size Room</h4>
-              <div class="room-features">
-                <div class="room-feature">
-                  <i class="fas fa-check-circle"></i>
-                  <span>Incl. breakfast</span>
+            <div class="card-image">
+              <img src="./assets/img/room2.jpg" alt="House" />
+              <div class="status-badge">Available</div>
+            </div>
+            <div class="card-content">
+              <div class="type-badge">SINGLE</div>
+              <div class="price">30,000 Rwf</div>
+              <h3 class="title">Single Bedroom</h3>
+              <div class="location">
+                <i class="fas fa-check-circle"></i>
+                Breakfast and Free Wifi included
+              </div>
+
+              <div class="card-details">
+                <div class="detail-item">
+                  <button class="btn-read-more">Book Now</button>
                 </div>
-                <div class="room-feature">
-                  <i class="fas fa-check-circle"></i>
-                  <span>Free Wi-Fi</span>
-                </div>
-                <div class="room-feature">
-                  <i class="fas fa-check-circle"></i>
-                  <span>sitting room</span>
-                </div>
-                <div class="room-feature">
-                  <i class="fas fa-check-circle"></i>
-                  <span>Bathroom</span>
+                <div class="detail-item">
+                  <button class="btn-read-more">Read More</button>
                 </div>
               </div>
-              <button class="btn-read-more">Read More</button>
             </div>
           </div>
-          <div class="room-info">
-            <div class="room-title">King Size Bedroom</div>
-            <div class="room-price">
-              20000 RWF
-              <span>a night</span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="room-card scale-in stagger-animation"
-          style="--stagger-delay: 3"
-        >
+
+          <!-- Card 3 -->
           <div
-            class="room-image"
-            style="background-image: url(./assets/img/room4.jpg)"
+            class="property-card fade-in stagger-animation"
+            style="--stagger-delay: 3"
           >
-            <div class="room-details">
-              <h4>Cozy Single Room Retreat</h4>
-              <div class="room-features">
-                <div class="room-feature">
-                  <i class="fas fa-check-circle"></i>
-                  <span>Incl. breakfast</span>
+            <div class="card-image">
+              <img src="./assets/img/room4.jpg" alt="House" />
+              <div class="status-badge">available</div>
+            </div>
+            <div class="card-content">
+              <div class="type-badge">SINGLE</div>
+              <div class="price">30,000 Rwf</div>
+              <h3 class="title">Single Bedroom</h3>
+              <div class="location">
+                <i class="fas fa-check-circle"></i>
+                Breakfast and Free Wifi included
+              </div>
+
+              <div class="card-details">
+                <div class="detail-item">
+                  <button class="btn-read-more">Book Now</button>
                 </div>
-                <div class="room-feature">
-                  <i class="fas fa-check-circle"></i>
-                  <span>Free Wi-Fi</span>
-                </div>
-                <div class="room-feature">
-                  <i class="fas fa-check-circle"></i>
-                  <span>Sitting room</span>
-                </div>
-                <div class="room-feature">
-                  <i class="fas fa-check-circle"></i>
-                  <span>Bathroom</span>
+                <div class="detail-item">
+                  <button class="btn-read-more">Read More</button>
                 </div>
               </div>
-              <button class="btn-read-more">Read More</button>
-            </div>
-          </div>
-          <div class="room-info">
-            <div class="room-title">Single room</div>
-            <div class="room-price">
-              30000 RWF
-              <span>a night</span>
             </div>
           </div>
         </div>
       </div>
     </section>
-
     <!-- USP Section -->
     <section class="usp-section">
       <div class="container">
@@ -322,7 +291,121 @@
       <h2>your home away from home!</h2>
       <button class="btn-white">Checkout the Our rooms</button>
     </section>
-
+    <!-- Our Services -->
+    <section class="container">
+      <h2 class="section-title fade-in">Our Services</h2>
+      <div class="rooms-grid">
+        <div
+          class="room-card scale-in stagger-animation"
+          style="--stagger-delay: 1"
+        >
+          <div
+            class="room-image"
+            style="background-image: url(./assets/img/room1.jpg)"
+          >
+            <div class="room-details">
+              <h4>Accomodations</h4>
+              <div class="room-features">
+                <div class="room-feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Incl. breakfast</span>
+                </div>
+                <div class="room-feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Free Wi-Fi</span>
+                </div>
+                <div class="room-feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Private Sitting room</span>
+                </div>
+                <div class="room-feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Hot bath</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="room-info">
+            <div class="room-title">comfort bedrooms</div>
+            <div class="room-price">
+              <span>From</span>
+              25000 RWF
+            </div>
+          </div>
+        </div>
+        <div
+          class="room-card scale-in stagger-animation"
+          style="--stagger-delay: 2"
+        >
+          <div
+            class="room-image"
+            style="background-image: url(./assets/img/dining.jpg)"
+          >
+            <div class="room-details">
+              <h4>Bar And Resto</h4>
+              <div class="room-features">
+                <div class="room-feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Incl. all drinks</span>
+                </div>
+                <div class="room-feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>custom food</span>
+                </div>
+                <div class="room-feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>buffet</span>
+                </div>
+                <div class="room-feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>wifi</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="room-card scale-in stagger-animation"
+          style="--stagger-delay: 3"
+        >
+          <div
+            class="room-image"
+            style="background-image: url(./assets/img/room4.jpg)"
+          >
+            <div class="room-details">
+              <h4>Cozy family Room Retreat</h4>
+              <div class="room-features">
+                <div class="room-feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Incl. breakfast</span>
+                </div>
+                <div class="room-feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Free Wi-Fi</span>
+                </div>
+                <div class="room-feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Sitting room</span>
+                </div>
+                <div class="room-feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Bathroom</span>
+                </div>
+              </div>
+              <button class="btn-read-more">Read More</button>
+            </div>
+          </div>
+          <div class="room-info">
+            <div class="room-title">Family room</div>
+            <div class="room-price">
+              <span>from</span>
+              30000 RWF
+              <span>a night</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Gallery -->
     <section class="gallery-section">
       <div class="container">
@@ -493,6 +576,64 @@
 
     <!-- Toast Notification Container -->
     <div id="toast-container"></div>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Book Your Room</h2>
+        <form class="booking-form">
+          <div class="booking-field">
+            <label>Email</label>
+            <input
+              type="email"
+              placeholder="Please enter your E-mail"
+              required
+            />
+          </div>
+          <div class="booking-field">
+            <label
+              >Room Type
+              <i
+                class="fas fa-info-circle"
+                style="font-size: 11px; color: #ccc"
+              ></i
+            ></label>
+            <select required>
+              <option>Select a room</option>
+              <option>Double Bedroom</option>
+              <option>King Size Bedroom</option>
+              <option>Single Room</option>
+            </select>
+          </div>
+          <div class="booking-field">
+            <label
+              >Check-in
+              <i
+                class="fas fa-info-circle"
+                style="font-size: 11px; color: #ccc"
+              ></i
+            ></label>
+            <input type="date" required />
+          </div>
+          <div class="booking-field">
+            <label
+              >Check-out
+              <i
+                class="fas fa-info-circle"
+                style="font-size: 11px; color: #ccc"
+              ></i
+            ></label>
+            <input type="date" required />
+          </div>
+          <div class="booking-field">
+            <label>Guests</label>
+            <input type="number" min="1" value="1" required />
+          </div>
+          <button type="submit" class="btn-book">Submit Booking</button>
+        </form>
+      </div>
+    </div>
 
     <!-- WhatsApp Button -->
     <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-btn">

@@ -3,279 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Property Listing Cards</title>
+    <title>Room Detail - StarHotel</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
-            padding: 40px 20px;
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            padding: 20px;
-        }
-
-        .property-card {
-            background: white;
-            border-radius: 12px;
-            overflow: visible;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .property-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .card-image {
-            position: relative;
-            height: 280px;
-            overflow: hidden;
-            border-radius: 12px 12px 0 0;
-        }
-
-        .card-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .status-badge {
-            position: absolute;
-            top: 16px;
-            left: 16px;
-            background: #16a34a;
-            color: white;
-            padding: 6px 16px;
-            border-radius: 6px;
-            font-size: 14px;
-            font-weight: 600;
-            z-index: 2;
-        }
-
-        .card-content {
-            padding: 24px;
-            position: relative;
-        }
-
-        .type-badge {
-            position: absolute;
-            top: -18px;
-            left: 24px;
-            background: white;
-            color: #16a34a;
-            padding: 8px 16px;
-            border-radius: 4px;
-            font-size: 14px;
-            font-weight: 600;
-            z-index: 3;
-        }
-
-        .price {
-            color: #16a34a;
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            margin-top: 12px;
-        }
-
-        .title {
-            color: #1e293b;
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 4px;
-            letter-spacing: 0.5px;
-        }
-
-        .subtitle {
-            color: #475569;
-            font-size: 16px;
-            margin-bottom: 16px;
-        }
-
-        .location {
-            display: flex;
-            align-items: center;
-            color: #64748b;
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-
-        .location i {
-            margin-right: 8px;
-            color: #16a34a;
-        }
-
-        .card-details {
-            display: flex;
-            justify-content: space-between;
-            padding-top: 20px;
-            border-top: 1px solid #e2e8f0;
-        }
-
-        .detail-item {
-            display: flex;
-            align-items: center;
-            color: #475569;
-            font-size: 14px;
-        }
-
-        .detail-item i {
-            margin-right: 8px;
-            color: #16a34a;
-        }
-
-        @media (max-width: 1024px) {
-            .cards-grid {
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                gap: 25px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .cards-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-                padding: 10px;
-            }
-
-            .price {
-                font-size: 24px;
-            }
-
-            .title {
-                font-size: 18px;
-            }
-
-            .card-image {
-                height: 240px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 20px 10px;
-            }
-
-            .card-content {
-                padding: 20px;
-            }
-
-            .card-image {
-                height: 220px;
-            }
-
-            .card-details {
-                flex-direction: column;
-                gap: 12px;
-            }
-        }
-    </style>
+    
 </head>
 <body>
-    <div class="container">
-        <div class="cards-grid">
-            <!-- Card 1 -->
-            <div class="property-card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&h=600&fit=crop" alt="House">
-                    <div class="status-badge">Irakodeshwa</div>
-                </div>
-                <div class="card-content">
-                    <div class="type-badge">House</div>
-                    <div class="price">50,000 Rwf</div>
-                    <h3 class="title">MUSANZE HOUSE</h3>
-                    <p class="subtitle">Irakodeshwa</p>
-                    <div class="location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Rwanda,Musanze
+    <!-- Hero Section with Breadcrumb -->
+    <div class="hero-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="#">Home</a> / <a href="#">Room list view</a> / <span>Room detail</span>
+            </div>
+            <h1>Room detail</h1>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Left Section: Image Slider -->
+                <div class="left-section">
+                    <div class="image-slider">
+                        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&h=600&fit=crop" alt="Room" class="slider-image active">
+                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&h=600&fit=crop" alt="Room" class="slider-image">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop" alt="Room" class="slider-image">
+                        <button class="slider-btn prev" onclick="changeSlide(-1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-btn next" onclick="changeSlide(1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
                     </div>
-                    <div class="card-details">
-                        <div class="detail-item">
-                            <i class="fas fa-expand-arrows-alt"></i>
-                            1000 Sqft
+                </div>
+
+                <!-- Right Section: Reservation Form -->
+                <div class="right-section">
+                    <div class="reservation-card">
+                        <h3>Reservation</h3>
+                        <div class="room-price">
+                            <span>Double Room</span>
+                            <span class="price"><span class="currency">€</span> 99.-</span>
+                            <span class="period">a night</span>
                         </div>
-                        <div class="detail-item">
-                            <i class="fas fa-bed"></i>
-                            4 Rooms
-                        </div>
+                        <form>
+                            <div class="form-group">
+                                <label>E-mail</label>
+                                <input type="email" placeholder="Please enter your E-mail">
+                            </div>
+                            <div class="form-group">
+                                <label>Check-in <i class="fas fa-info-circle"></i></label>
+                                <input type="text" placeholder="Check-in">
+                            </div>
+                            <div class="form-group">
+                                <label>Check-out <i class="fas fa-info-circle"></i></label>
+                                <input type="text" placeholder="Check-out">
+                            </div>
+                            <div class="form-group">
+                                <label>Guests</label>
+                                <input type="number" value="1" min="1">
+                            </div>
+                            <button type="button" class="book-btn">BOOK NOW</button>
+                        </form>
                     </div>
                 </div>
             </div>
 
-            <!-- Card 2 -->
-            <div class="property-card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&h=600&fit=crop" alt="House">
-                    <div class="status-badge">Irakodeshwa</div>
-                </div>
-                <div class="card-content">
-                    <div class="type-badge">House</div>
-                    <div class="price">50,000 Rwf</div>
-                    <h3 class="title">MUSANZE HOUSE</h3>
-                    <p class="subtitle">Irakodeshwa</p>
-                    <div class="location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Rwanda,Musanze
-                    </div>
-                    <div class="card-details">
-                        <div class="detail-item">
-                            <i class="fas fa-expand-arrows-alt"></i>
-                            1000 Sqft
-                        </div>
-                        <div class="detail-item">
+            <!-- Room Details Section -->
+            <h2 class="section-header">Room Details</h2>
+            
+            <div class="details-grid">
+                <div class="detail-section">
+                    <h4>Table overview</h4>
+                    <div class="amenities-list">
+                        <div class="amenity-item">
                             <i class="fas fa-bed"></i>
-                            4 Rooms
+                            <span>Double Bed</span>
                         </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-wifi"></i>
+                            <span>Free Internet</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-newspaper"></i>
+                            <span>Free Newspaper</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-ruler"></i>
+                            <span>60 square meter</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-eye"></i>
+                            <span>Beach view</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-users"></i>
+                            <span>2 persons</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-bed"></i>
+                            <span>Double Bed</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-wifi"></i>
+                            <span>Free Internet</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-coffee"></i>
+                            <span>Breakfast included</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-door-open"></i>
+                            <span>Private Balcony</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-tv"></i>
+                            <span>Flat Screen TV</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-volume-up"></i>
+                            <span>Jacuzzi</span>
+                        </div>
+                    </div>
+                    <p class="description-text" style="margin-top: 20px;">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ligula nibh, cursus id euismod non, adipiscing nec nibh. Nam ac rhoncus fermentum, lorem dncia vulputate felis, id auctor mauris urna eget elama.
+                    </p>
+                </div>
+
+                <div class="detail-section">
+                    <h2 class="section-header">Overview</h2>
+                    
+                    <div class="tabs">
+                        <div class="tab active" onclick="switchTab('overview')">Overview</div>
+                        <div class="tab" onclick="switchTab('facilities')">Facilities</div>
+                        <div class="tab" onclick="switchTab('extra')">Extra</div>
+                    </div>
+
+                    <div class="tab-content active" id="overview-tab">
+                        <div class="overview-content">
+                            <div class="overview-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla eu posuere tincidunt. Aliquam gravida, justo in pellentesque tristique, sapien eros eleifend metus dapibus varius tortor mi. Nulla sapien leoreet nec gravida urna.</p>
+                                <p>Lorem ipsum dolor sed ante quam sed lobortis eu pellentesque mauris odio lacus. Nunc at pharetra eros, a viverra leo. Mauris et hendrerit justo. Mauris eleestias magna vitae nisl ultrices semper. Nam vitae sapien magna. Nam et orci nulla. Ut nec magna tortor. Nulla dolor sapien, laoreet nec lectus non, egestas nec lorem.</p>
+                            </div>
+                            <div class="overview-image">
+                                <img src="https://images.unsplash.com/photo-1559508551-44bff1de756b?w=300&h=200&fit=crop" alt="Breakfast">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="facilities-tab">
+                        <p class="description-text">Facilities content would go here...</p>
+                    </div>
+
+                    <div class="tab-content" id="extra-tab">
+                        <p class="description-text">Extra content would go here...</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Card 3 -->
-            <div class="property-card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop" alt="House">
-                    <div class="status-badge">Irakodeshwa</div>
-                </div>
-                <div class="card-content">
-                    <div class="type-badge">House</div>
-                    <div class="price">50,000 Rwf</div>
-                    <h3 class="title">MUSANZE HOUSE</h3>
-                    <p class="subtitle">Irakodeshwa</p>
-                    <div class="location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Rwanda,Musanze
-                    </div>
-                    <div class="card-details">
-                        <div class="detail-item">
-                            <i class="fas fa-expand-arrows-alt"></i>
-                            1000 Sqft
+            <!-- Other Rooms Section -->
+            <h2 class="section-header">Other rooms</h2>
+            
+            <div class="other-rooms">
+                <div class="room-card">
+                    <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=400&h=300&fit=crop" alt="Double bedroom">
+                    <div class="room-card-content">
+                        <div class="room-card-header">
+                            <h4>Double bedroom</h4>
+                            <div class="room-card-price">
+                                <span class="price"><span class="currency">€</span> 149</span>
+                                <span class="period">a night</span>
+                            </div>
                         </div>
-                        <div class="detail-item">
-                            <i class="fas fa-bed"></i>
-                            4 Rooms
+                    </div>
+                </div>
+
+                <div class="room-card">
+                    <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=400&h=300&fit=crop" alt="King Size Bedroom">
+                    <div class="room-card-content">
+                        <div class="room-card-header">
+                            <h4>King Size Bedroom</h4>
+                            <div class="room-card-price">
+                                <span class="price"><span class="currency">€</span> 149</span>
+                                <span class="period">a night</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="room-card">
+                    <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=400&h=300&fit=crop" alt="Single room">
+                    <div class="room-card-content">
+                        <div class="room-card-header">
+                            <h4>Single room</h4>
+                            <div class="room-card-price">
+                                <span class="price"><span class="currency">€</span> 120</span>
+                                <span class="period">a night</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    
 </body>
 </html>

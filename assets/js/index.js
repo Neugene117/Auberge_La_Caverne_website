@@ -176,3 +176,107 @@ function handleBooking(event) {
     }
   }, 2000); // 2 second delay for simulation
 }
+
+// Modal functionality
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("booking-modal");
+  const closeBtn = document.querySelector(".close");
+  const bookNowBtns = document.querySelectorAll(".btn-read-more");
+
+  bookNowBtns.forEach((btn) => {
+    if (btn.textContent.trim() === "Book Now") {
+      btn.addEventListener("click", () => {
+        modal.style.display = "block";
+      });
+    }
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+  // Handle modal form submission
+  const modalForm = document.querySelector(".booking-form");
+  modalForm.addEventListener("submit", handleModalBooking);
+});
+
+// Handle modal booking submission
+function handleModalBooking(event) {
+  event.preventDefault();
+
+  const btn = event.target.querySelector('button[type="submit"]');
+  const email = document.querySelector(
+    '.booking-form input[type="email"]',
+  ).value;
+  const roomSelect = document.querySelector(".booking-form select").value;
+  const checkIn = document.querySelector(
+    '.booking-form input[type="date"]:nth-of-type(1)',
+  ).value;
+  const checkOut = document.querySelector(
+    '.booking-form input[type="date"]:nth-of-type(2)',
+  ).value;
+  const guests = document.querySelector(
+    '.booking-form input[type="number"]',
+  ).value;
+
+  // Set loading state
+  btn.classList.add("loading");
+  btn.disabled = true;
+  btn.textContent = "Booking...";
+
+  // Simulate form submission
+  setTimeout(() => {
+    // Validate fields
+    let isValid = true;
+    let errorMessage = "";
+
+    if (!email || !email.includes("@")) {
+      isValid = false;
+      errorMessage = "Please enter a valid email address.";
+    } else if (roomSelect === "Select a room") {
+      isValid = false;
+      errorMessage = "Please select a room type.";
+    } else if (!checkIn) {
+      isValid = false;
+      errorMessage = "Please select a check-in date.";
+    } else if (!checkOut) {
+      isValid = false;
+      errorMessage = "Please select a check-out date.";
+    } else if (new Date(checkIn) >= new Date(checkOut)) {
+      isValid = false;
+      errorMessage = "Check-out date must be after check-in date.";
+    } else if (!guests || guests < 1) {
+      isValid = false;
+      errorMessage = "Please enter number of guests.";
+    }
+
+    // Remove loading state
+    btn.classList.remove("loading");
+    btn.disabled = false;
+    btn.textContent = "Submit Booking";
+
+    if (isValid) {
+      showToast("Booking successful! We will contact you soon.", "success");
+      // Close modal
+      document.getElementById("booking-modal").style.display = "none";
+      // Reset form
+      document.querySelector('.booking-form input[type="email"]').value = "";
+      document.querySelector(".booking-form select").value = "Select a room";
+      document.querySelector(
+        '.booking-form input[type="date"]:nth-of-type(1)',
+      ).value = "";
+      document.querySelector(
+        '.booking-form input[type="date"]:nth-of-type(2)',
+      ).value = "";
+      document.querySelector('.booking-form input[type="number"]').value = "1";
+    } else {
+      showToast(errorMessage, "error");
+    }
+  }, 2000); // 2 second delay for simulation
+}

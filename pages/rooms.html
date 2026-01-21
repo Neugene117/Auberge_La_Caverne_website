@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Rooms - Auberge La Caverne</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/header.css" />
+    <link rel="stylesheet" href="../assets/css/index.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="../index.html">
+            <img src="../assets/img/logo.png" alt="" srcset="" />
+          </a>
+        </div>
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./about.html">About Us</a></li>
+          <li class="dropdown">
+            <a href="./rooms.html"
+              >Services <i class="fas fa-chevron-down"></i
+            ></a>
+            <div class="dropdown-content">
+              <a href="./bar.html">Bar</a>
+              <a href="./rooms.html">Room</a>
+            </div>
+          </li>
+          <li><a href="./contactus.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section with Breadcrumb -->
+    <div class="hero-section">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="../index.html">Home</a> / <span>Our Rooms</span>
+        </div>
+        <h1>Our Rooms</h1>
+      </div>
+    </div>
+
+    <!-- Rooms Section -->
+    <section class="rooms-section">
+      <div class="container">
+        <h2 class="section-title fade-in">Our Rooms</h2>
+        <div class="cards-grid">
+          <!-- Card 1 -->
+          <div
+            class="property-card fade-in stagger-animation"
+            style="--stagger-delay: 1"
+          >
+            <div class="card-image">
+              <img src="../assets/img/room1.jpg" alt="Single Bedroom" />
+              <div class="status-badge">Available</div>
+            </div>
+            <div class="card-content">
+              <div class="type-badge">SINGLE</div>
+              <div class="price">30,000 Rwf</div>
+              <h3 class="title">Single Bedroom</h3>
+              <div class="location">
+                <i class="fas fa-check-circle"></i>
+                Breakfast and Free Wifi included
+              </div>
+
+              <div class="card-details">
+                <div class="detail-item">
+                  <button class="btn-read-more">Book Now</button>
+                </div>
+                <div class="detail-item">
+                  <button class="btn-read-more">Read More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="property-card fade-in stagger-animation"
+            style="--stagger-delay: 2"
+          >
+            <div class="card-image">
+              <img src="../assets/img/room2.jpg" alt="Single Bedroom" />
+              <div class="status-badge">Available</div>
+            </div>
+            <div class="card-content">
+              <div class="type-badge">SINGLE</div>
+              <div class="price">30,000 Rwf</div>
+              <h3 class="title">Single Bedroom</h3>
+              <div class="location">
+                <i class="fas fa-check-circle"></i>
+                Breakfast and Free Wifi included
+              </div>
+
+              <div class="card-details">
+                <div class="detail-item">
+                  <button class="btn-read-more">Book Now</button>
+                </div>
+                <div class="detail-item">
+                  <button class="btn-read-more">Read More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="property-card fade-in stagger-animation"
+            style="--stagger-delay: 3"
+          >
+            <div class="card-image">
+              <img src="../assets/img/room4.jpg" alt="Single Bedroom" />
+              <div class="status-badge">Available</div>
+            </div>
+            <div class="card-content">
+              <div class="type-badge">SINGLE</div>
+              <div class="price">30,000 Rwf</div>
+              <h3 class="title">Single Bedroom</h3>
+              <div class="location">
+                <i class="fas fa-check-circle"></i>
+                Breakfast and Free Wifi included
+              </div>
+
+              <div class="card-details">
+                <div class="detail-item">
+                  <button class="btn-read-more">Book Now</button>
+                </div>
+                <div class="detail-item">
+                  <button class="btn-read-more">Read More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="property-card fade-in stagger-animation"
+            style="--stagger-delay: 4"
+          >
+            <div class="card-image">
+              <img src="../assets/img/room5.jpg" alt="Double Bedroom" />
+              <div class="status-badge">Available</div>
+            </div>
+            <div class="card-content">
+              <div class="type-badge">DOUBLE</div>
+              <div class="price">40,000 Rwf</div>
+              <h3 class="title">Double Bedroom</h3>
+              <div class="location">
+                <i class="fas fa-check-circle"></i>
+                Breakfast and Free Wifi included
+              </div>
+
+              <div class="card-details">
+                <div class="detail-item">
+                  <button class="btn-read-more">Book Now</button>
+                </div>
+                <div class="detail-item">
+                  <button class="btn-read-more">Read More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div
+            class="property-card fade-in stagger-animation"
+            style="--stagger-delay: 5"
+          >
+            <div class="card-image">
+              <img src="../assets/img/sittingroom3.jpg" alt="Family Room" />
+              <div class="status-badge">Available</div>
+            </div>
+            <div class="card-content">
+              <div class="type-badge">FAMILY</div>
+              <div class="price">50,000 Rwf</div>
+              <h3 class="title">Family Room</h3>
+              <div class="location">
+                <i class="fas fa-check-circle"></i>
+                Breakfast and Free Wifi included
+              </div>
+
+              <div class="card-details">
+                <div class="detail-item">
+                  <button class="btn-read-more">Book Now</button>
+                </div>
+                <div class="detail-item">
+                  <button class="btn-read-more">Read More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div
+            class="property-card fade-in stagger-animation"
+            style="--stagger-delay: 6"
+          >
+            <div class="card-image">
+              <img src="../assets/img/room 3.jpg" alt="Luxury Suite" />
+              <div class="status-badge">Available</div>
+            </div>
+            <div class="card-content">
+              <div class="type-badge">SUITE</div>
+              <div class="price">60,000 Rwf</div>
+              <h3 class="title">Luxury Suite</h3>
+              <div class="location">
+                <i class="fas fa-check-circle"></i>
+                Breakfast and Free Wifi included
+              </div>
+
+              <div class="card-details">
+                <div class="detail-item">
+                  <button class="btn-read-more">Book Now</button>
+                </div>
+                <div class="detail-item">
+                  <button class="btn-read-more">Read More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/index.js"></script>
+  </body>
+</html>
