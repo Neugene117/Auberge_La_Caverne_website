@@ -43,44 +43,46 @@
         </ul>
       </nav>
     </header>
-
+ 
     <!-- Hero Section -->
     <section class="about-hero">
-      <div class="hero-overlay"></div>
       <div class="hero-content">
-        <h1 class="fade-in">About Auberge La Caverne</h1>
-        <p class="fade-in" style="transition-delay: 0.1s">Your Home Away From Home in Rwanda</p>
+        <div class="hero-inner">
+          <h1 class="hero-title fade-in">About Auberge La Caverne</h1>
+          <div class="hero-breadcrumb fade-in">
+            <a href="../index.html">Home</a>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-current">About</span>
+          </div>
+          <p class="hero-subtitle fade-in">Your Home Away From Home in Rwanda</p>
+        </div>
       </div>
     </section>
 
     <!-- Our Story Section -->
-    <section class="about-section">
+    <section class="our-story-section">
       <div class="container">
-        <div class="story-grid">
-          <div class="story-image fade-in-left">
-            <img src="../assets/img/outside.jpg" alt="Our Story" />
+        <div class="story-layout">
+          <!-- Left Side - Image Card -->
+          <div class="story-image-card fade-in-left">
+            <div class="image-wrapper">
+              <img src="../assets/img/room1.jpg" alt="Auberge La Caverne Team" class="story-image" />
+              <div class="image-overlay"></div>
+              <div class="image-text">
+                <h3 class="image-heading">Empowering Communities</h3>
+                <p class="image-subtitle">Through hospitality, comfort, and sustainable practices</p>
+              </div>
+            </div>
           </div>
+
+          <!-- Right Side - Text Content -->
           <div class="story-content fade-in-right">
-            <h2 class="section-title">Our Story</h2>
-            <p>
-              Auberge La Caverne was born from a passion for hospitality and a
-              deep love for Rwanda's natural beauty. Founded in 2010, our
-              guesthouse has been welcoming travelers from around the world to
-              experience the warmth of Rwandan hospitality combined with modern
-              comfort and convenience.
-            </p>
-            <p>
-              Nestled in the scenic mountains of Rwanda, our establishment has
-              grown from a small family-run guesthouse to a beloved destination
-              for tourists, business travelers, and adventurers alike. Every
-              detail of our property has been carefully crafted to ensure our
-              guests feel not just welcome, but truly at home.
-            </p>
-            <p>
-              Our journey is one of continuous improvement and dedication to
-              creating memorable experiences. From our attentive staff to our
-              thoughtfully designed rooms, we believe that exceptional
-              hospitality is the foundation of a great stay.
+            <h2 class="story-main-title">
+              Nurturing Comfort,<br />
+              <span class="highlight-text">Communities</span>
+            </h2>
+            <p class="story-description">
+              Auberge La Caverne was born from a passion for hospitality and a deep love for Rwanda's natural beauty. Founded in 2010, our guesthouse has been welcoming travelers from around the world to experience the warmth of Rwandan hospitality combined with modern comfort and convenience. Every detail of our property has been carefully crafted to ensure our guests feel not just welcome, but truly at home.
             </p>
           </div>
         </div>
@@ -90,62 +92,65 @@
     <!-- Mission & Vision Section -->
     <section class="mission-vision-section">
       <div class="container">
-        <h2 class="section-title fade-in">Our Core Values</h2>
+        <div class="section-header">
+          <h2 class="section-title fade-in">Our Core Values</h2>
+          <p class="section-subtitle fade-in">The principles that guide everything we do</p>
+        </div>
         <div class="values-grid">
           <div
             class="value-card fade-in stagger-animation"
             style="--stagger-delay: 1"
           >
-            <div class="value-icon">
-              <i class="fas fa-heart"></i>
+            <div class="value-image-wrapper">
+              <div class="value-icon-circle">
+                <i class="fas fa-heart"></i>
+              </div>
             </div>
-            <h3>Hospitality</h3>
-            <p>
-              We believe in genuine hospitality that goes beyond providing
-              rooms and meals. We treat every guest as family, ensuring
-              personalized attention and care.
+            <h3 class="value-title">Hospitality</h3>
+            <p class="value-description">
+              We believe in genuine hospitality that goes beyond providing rooms and meals. We treat every guest as family, ensuring personalized attention and care.
             </p>
           </div>
           <div
             class="value-card fade-in stagger-animation"
             style="--stagger-delay: 2"
           >
-            <div class="value-icon">
-              <i class="fas fa-leaf"></i>
+            <div class="value-image-wrapper">
+              <div class="value-icon-circle">
+                <i class="fas fa-leaf"></i>
+              </div>
             </div>
-            <h3>Sustainability</h3>
-            <p>
-              We are committed to preserving Rwanda's natural beauty for future
-              generations. Our eco-friendly practices and sustainable operations
-              reflect our environmental responsibility.
+            <h3 class="value-title">Sustainability</h3>
+            <p class="value-description">
+              We are committed to preserving Rwanda's natural beauty for future generations. Our eco-friendly practices and sustainable operations reflect our environmental responsibility.
             </p>
           </div>
           <div
             class="value-card fade-in stagger-animation"
             style="--stagger-delay: 3"
           >
-            <div class="value-icon">
-              <i class="fas fa-handshake"></i>
+            <div class="value-image-wrapper">
+              <div class="value-icon-circle">
+                <i class="fas fa-handshake"></i>
+              </div>
             </div>
-            <h3>Community</h3>
-            <p>
-              We actively support the local community through employment,
-              partnerships with local suppliers, and community development
-              initiatives.
+            <h3 class="value-title">Community</h3>
+            <p class="value-description">
+              We actively support the local community through employment, partnerships with local suppliers, and community development initiatives.
             </p>
           </div>
           <div
             class="value-card fade-in stagger-animation"
             style="--stagger-delay: 4"
           >
-            <div class="value-icon">
-              <i class="fas fa-star"></i>
+            <div class="value-image-wrapper">
+              <div class="value-icon-circle">
+                <i class="fas fa-star"></i>
+              </div>
             </div>
-            <h3>Excellence</h3>
-            <p>
-              We strive for excellence in every aspect of our service, from
-              cleanliness to customer service, ensuring the highest standards
-              for our guests.
+            <h3 class="value-title">Excellence</h3>
+            <p class="value-description">
+              We strive for excellence in every aspect of our service, from cleanliness to customer service, ensuring the highest standards for our guests.
             </p>
           </div>
         </div>
@@ -199,10 +204,10 @@
               </div>
             </div>
             <div class="team-info">
-              <h3>Marie Goretti</h3>
+              <h3>Eugene</h3>
               <p class="role">Head Chef</p>
               <p class="description">
-                Marie Goretti creates culinary masterpieces combining traditional
+                Eugene creates culinary masterpieces combining traditional
                 Rwandan flavors with international cuisine.
               </p>
             </div>
