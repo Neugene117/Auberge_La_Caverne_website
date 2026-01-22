@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bar & Restaurant Menu - Auberge La Caverne</title>
+    <link rel="stylesheet" href="../assets/css/bar.css" />
+    <link rel="stylesheet" href="../assets/css/header.css" />
+  </head>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="../index.html">
+          <img src="../assets/img/logo.png" alt="Logo" />
+        </a>
+      </div>
+
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Home</a></li>
+        <li><a class="active" href="">About Us</a></li>
+        <li class="dropdown">
+          <a href="./rooms.html"
+            >Services <i class="fas fa-chevron-down"></i
+          ></a>
+          <div class="dropdown-content">
+            <a href="./bar.html">Bar</a>
+            <a href="./rooms.html">Room</a>
+          </div>
+        </li>
+        <li><a href="./contactus.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <div class="hero-section">
+      <div class="hero-container">
+        <div class="breadcrumb">
+          <a href="../index.html">Home</a> / <span>Bar & Restaurant</span>
+        </div>
+        <h1>Bar & Restaurant Menu</h1>
+      </div>
+    </div>
+
+    <div class="menu-tabs">
+      <button class="tab-btn active" onclick="showMenu('restaurant')">
+        Restaurant
+      </button>
+      <button class="tab-btn" onclick="showMenu('bar')">Bar</button>
+    </div>
+
+    <div class="container">
+      <!-- Restaurant Menu -->
+      <div id="restaurant" class="menu-section active">
+        <div class="category">
+          <h2 class="category-title">Starters & Appetizers</h2>
+          <div class="menu-grid">
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&q=80"
+                alt="Sambusa"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">Sambusa</h3>
+                  <span class="item-price">3,000 RWF</span>
+                </div>
+                <p class="item-description">
+                  Crispy triangular pastries filled with spiced vegetables or
+                  minced meat, served with tamarind chutney
+                </p>
+                <div class="item-tags">
+                  <span class="tag popular">Popular</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&q=80"
+                alt="Isombe"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">Isombe</h3>
+                  <span class="item-price">4,500 RWF</span>
+                </div>
+                <p class="item-description">
+                  Traditional cassava leaves cooked in peanut sauce with garlic
+                  and onions
+                </p>
+                <div class="item-tags">
+                  <span class="tag vegetarian">Vegetarian</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1587334207976-c1b33c6e8d5f?w=800&q=80"
+                alt="Grilled Plantains"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">Grilled Plantains</h3>
+                  <span class="item-price">2,500 RWF</span>
+                </div>
+                <p class="item-description">
+                  Sweet plantains grilled to perfection, served with spicy
+                  peanut dipping sauce
+                </p>
+                <div class="item-tags">
+                  <span class="tag vegetarian">Vegetarian</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="category">
+          <h2 class="category-title">Main Courses</h2>
+          <div class="menu-grid">
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=800&q=80"
+                alt="Brochettes"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">Brochettes (Beef)</h3>
+                  <span class="item-price">8,000 RWF</span>
+                </div>
+                <p class="item-description">
+                  Tender beef skewers marinated in African spices, grilled over
+                  charcoal and served with fries and salad
+                </p>
+                <div class="item-tags">
+                  <span class="tag popular">Popular</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1580959375944-1ab5b8c5f2cc?w=800&q=80"
+                alt="Tilapia Fish"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">Tilapia Fish</h3>
+                  <span class="item-price">12,000 RWF</span>
+                </div>
+                <p class="item-description">
+                  Fresh whole tilapia from Lake Kivu, grilled or fried, served
+                  with ugali and vegetables
+                </p>
+                <div class="item-tags">
+                  <span class="tag popular">Popular</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=800&q=80"
+                alt="Goat Stew"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">Goat Stew</h3>
+                  <span class="item-price">10,000 RWF</span>
+                </div>
+                <p class="item-description">
+                  Slow-cooked goat meat in rich tomato and herb sauce, served
+                  with rice or matoke
+                </p>
+                <div class="item-tags">
+                  <span class="tag spicy">Spicy</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=800&q=80"
+                alt="Vegetable Curry"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">Vegetable Curry</h3>
+                  <span class="item-price">6,500 RWF</span>
+                </div>
+                <p class="item-description">
+                  Mixed seasonal vegetables in coconut curry sauce with aromatic
+                  spices, served with rice
+                </p>
+                <div class="item-tags">
+                  <span class="tag vegetarian">Vegetarian</span>
+                  <span class="tag spicy">Spicy</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=800&q=80"
+                alt="Chicken Pilau"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">Chicken Pilau</h3>
+                  <span class="item-price">7,500 RWF</span>
+                </div>
+                <p class="item-description">
+                  Aromatic spiced rice cooked with tender chicken pieces,
+                  garnished with fried onions
+                </p>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=800&q=80"
+                alt="Ugali with Beans"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">Ugali with Beans</h3>
+                  <span class="item-price">5,000 RWF</span>
+                </div>
+                <p class="item-description">
+                  Traditional maize meal served with slow-cooked beans in savory
+                  tomato sauce
+                </p>
+                <div class="item-tags">
+                  <span class="tag vegetarian">Vegetarian</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="category">
+          <h2 class="category-title">Desserts</h2>
+          <div class="menu-grid">
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1564093497595-593b96d80180?w=800&q=80"
+                alt="Tropical Fruit Platter"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">Tropical Fruit Platter</h3>
+                  <span class="item-price">4,000 RWF</span>
+                </div>
+                <p class="item-description">
+                  Fresh seasonal fruits including pineapple, mango, papaya, and
+                  passion fruit
+                </p>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1587241321921-91a834d82450?w=800&q=80"
+                alt="Banana Flambe"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">Banana Flambe</h3>
+                  <span class="item-price">5,500 RWF</span>
+                </div>
+                <p class="item-description">
+                  Caramelized bananas with rum sauce, served with vanilla ice
+                  cream
+                </p>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80"
+                alt="Chocolate Lava Cake"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">Chocolate Lava Cake</h3>
+                  <span class="item-price">6,000 RWF</span>
+                </div>
+                <p class="item-description">
+                  Warm chocolate cake with molten center, served with whipped
+                  cream
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bar Menu -->
+      <div id="bar" class="menu-section">
+        <div class="category">
+          <h2 class="category-title">Signature Cocktails</h2>
+          <div class="menu-grid">
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1536935338788-846bb9981813?w=800&q=80"
+                alt="Rwanda Sunset"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">Rwanda Sunset</h3>
+                  <span class="item-price">8,000 RWF</span>
+                </div>
+                <p class="item-description">
+                  Passion fruit vodka, mango juice, lime, and a splash of
+                  grenadine
+                </p>
+                <div class="item-tags">
+                  <span class="tag popular">Popular</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&q=80"
+                alt="Mountain Mist"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">Mountain Mist</h3>
+                  <span class="item-price">7,500 RWF</span>
+                </div>
+                <p class="item-description">
+                  Gin, elderflower, cucumber, mint, and tonic water
+                </p>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1546171753-97d7676e4602?w=800&q=80"
+                alt="Tropical Storm"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">Tropical Storm</h3>
+                  <span class="item-price">9,000 RWF</span>
+                </div>
+                <p class="item-description">
+                  Rum blend, pineapple, coconut cream, and blue curacao
+                </p>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=800&q=80"
+                alt="Caverne Mojito"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">Caverne Mojito</h3>
+                  <span class="item-price">6,500 RWF</span>
+                </div>
+                <p class="item-description">
+                  White rum, fresh mint, lime, sugar, and soda water
+                </p>
+                <div class="item-tags">
+                  <span class="tag popular">Popular</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="category">
+          <h2 class="category-title">Beers & Ciders</h2>
+          <div class="menu-grid">
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1608270586620-248524c67de9?w=800&q=80"
+                alt="Primus Beer"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">Primus (Local)</h3>
+                  <span class="item-price">2,000 RWF</span>
+                </div>
+                <p class="item-description">
+                  Rwanda's favorite lager beer, crisp and refreshing
+                </p>
+                <div class="item-tags">
+                  <span class="tag popular">Popular</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=800&q=80"
+                alt="Mützig"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">Mützig</h3>
+                  <span class="item-price">2,000 RWF</span>
+                </div>
+                <p class="item-description">
+                  Premium lager with a smooth, balanced taste
+                </p>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1612528443702-f6741f70a049?w=800&q=80"
+                alt="Turbo King"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">Turbo King</h3>
+                  <span class="item-price">2,500 RWF</span>
+                </div>
+                <p class="item-description">
+                  Strong lager with 7% alcohol content
+                </p>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1618885472179-5e474019f2a9?w=800&q=80"
+                alt="Imported Beers"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">Imported Beers</h3>
+                  <span class="item-price">4,000 RWF</span>
+                </div>
+                <p class="item-description">
+                  Selection includes Heineken, Corona, and Guinness
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="category">
+          <h2 class="category-title">Wines & Spirits</h2>
+          <div class="menu-grid">
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80"
+                alt="House Wine"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">House Wine (Glass)</h3>
+                  <span class="item-price">5,000 RWF</span>
+                </div>
+                <p class="item-description">
+                  Red, white, or rosé - ask server for current selection
+                </p>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=800&q=80"
+                alt="Premium Wine"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">Premium Wine (Bottle)</h3>
+                  <span class="item-price">35,000 RWF</span>
+                </div>
+                <p class="item-description">
+                  South African and European wines available
+                </p>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1527281400683-1aae777175f8?w=800&q=80"
+                alt="Whiskey"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">Whiskey (Single)</h3>
+                  <span class="item-price">7,000 RWF</span>
+                </div>
+                <p class="item-description">
+                  Selection of Scotch, Irish, and American whiskeys
+                </p>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1560512823-829485b8bf24?w=800&q=80"
+                alt="Vodka and Gin"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">Vodka/Gin (Single)</h3>
+                  <span class="item-price">5,000 RWF</span>
+                </div>
+                <p class="item-description">
+                  Premium brands available, served with mixer of choice
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="category">
+          <h2 class="category-title">Non-Alcoholic Beverages</h2>
+          <div class="menu-grid">
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=800&q=80"
+                alt="Fresh Juices"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">Fresh Juices</h3>
+                  <span class="item-price">3,000 RWF</span>
+                </div>
+                <p class="item-description">
+                  Passion fruit, mango, pineapple, tree tomato, or mixed fruit
+                </p>
+                <div class="item-tags">
+                  <span class="tag popular">Popular</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=800&q=80"
+                alt="Soft Drinks"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">Soft Drinks</h3>
+                  <span class="item-price">1,500 RWF</span>
+                </div>
+                <p class="item-description">
+                  Coca-Cola, Fanta, Sprite, Tonic Water
+                </p>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=800&q=80"
+                alt="Coffee and Tea"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">Coffee/Tea</h3>
+                  <span class="item-price">2,000 RWF</span>
+                </div>
+                <p class="item-description">
+                  Freshly brewed Rwandan coffee or selection of teas
+                </p>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80"
+                alt="Bottled Water"
+                class="item-image"
+              />
+              <div class="item-content">
+                <div class="item-header">
+                  <h3 class="item-name">Bottled Water</h3>
+                  <span class="item-price">1,000 RWF</span>
+                </div>
+                <p class="item-description">500ml still or sparkling</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>
+            Auberge La Caverne is your home away from home in Rwanda. We offer
+            comfortable accommodations, authentic hospitality, and unforgettable
+            experiences in a serene mountain setting.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#bar">Bar</a></li>
+            <li><a href="#room">Room</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <p>Email: info@example.com</p>
+          <p>Phone: +1 234 567 890</p>
+          <p>Address: 123 Street, City, Country</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Your Company. All rights reserved.</p>
+      </div>
+    </footer>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-btn">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/bar.js"></script>
+  </body>
+</html>
