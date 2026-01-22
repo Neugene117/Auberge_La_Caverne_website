@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - Auberge La Caverne</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/header.css" />
+    <link rel="stylesheet" href="../assets/css/about.css" />
+    <link rel="stylesheet" href="../assets/css/gallery.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="../index.html">
+            <img src="../assets/img/logo.png" alt="Logo" />
+          </a>
+        </div>
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./about.html">About Us</a></li>
+          <li class="dropdown">
+            <a href="./rooms.html"
+              >Services <i class="fas fa-chevron-down"></i
+            ></a>
+            <div class="dropdown-content">
+              <a href="./bar.html">Bar</a>
+              <a href="./resto.html">Resto</a>
+              <a href="./rooms.html">Room</a>
+            </div>
+          </li>
+          <li><a class="active" href="./gallery.html">Gallery</a></li>
+          <li><a href="./contactus.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section with Breadcrumb -->
+    <div class="hero-section">
+      <div class="hero-container">
+        <div class="breadcrumb">
+          <a href="../index.html">Home</a> / <span>Gallery</span>
+        </div>
+        <h1>Our Gallery</h1>
+        <p class="hero-subtitle">
+          Explore the beauty and elegance of Auberge La Caverne
+        </p>
+      </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+      <div class="container">
+        <div class="gallery-header">
+          <h2 class="section-title fade-in">Gallery</h2>
+          <p class="gallery-description">
+            Discover the stunning spaces, comfortable accommodations, and
+            exquisite dining experiences that make Auberge La Caverne a
+            destination like no other.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-buttons fade-in">
+          <button class="filter-btn active" data-filter="all">
+            <i class="fas fa-th"></i> All
+          </button>
+          <button class="filter-btn" data-filter="rooms">
+            <i class="fas fa-door-open"></i> Rooms
+          </button>
+          <button class="filter-btn" data-filter="dining">
+            <i class="fas fa-utensils"></i> Dining
+          </button>
+          <button class="filter-btn" data-filter="facilities">
+            <i class="fas fa-spa"></i> Facilities
+          </button>
+          <button class="filter-btn" data-filter="exterior">
+            <i class="fas fa-tree"></i> Exterior
+          </button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-wrapper">
+          <div class="gallery-grid" id="galleryGrid">
+            <!-- Rooms -->
+            <div class="gallery-item fade-in large" data-category="rooms">
+              <div
+                class="gallery-image"
+                style="background-image: url(../assets/img/room1.jpg)"
+              >
+                <div class="overlay">
+                  <a
+                    href="../assets/img/room1.jpg"
+                    class="lightbox-link"
+                    data-lightbox="gallery"
+                    title="Comfortable Single Room"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </a>
+                </div>
+              </div>
+              <h3 class="gallery-title">Single Room</h3>
+            </div>
+
+            <div class="gallery-item fade-in" data-category="rooms">
+              <div
+                class="gallery-image"
+                style="background-image: url(../assets/img/room2.jpg)"
+              >
+                <div class="overlay">
+                  <a
+                    href="../assets/img/room2.jpg"
+                    class="lightbox-link"
+                    data-lightbox="gallery"
+                    title="Spacious Double Room"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </a>
+                </div>
+              </div>
+              <h3 class="gallery-title">Double Room</h3>
+            </div>
+
+            <div class="gallery-item fade-in medium" data-category="rooms">
+              <div
+                class="gallery-image"
+                style="background-image: url(../assets/img/room4.jpg)"
+              >
+                <div class="overlay">
+                  <a
+                    href="../assets/img/room4.jpg"
+                    class="lightbox-link"
+                    data-lightbox="gallery"
+                    title="Luxury Suite"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </a>
+                </div>
+              </div>
+              <h3 class="gallery-title">Luxury Suite</h3>
+            </div>
+
+            <div class="gallery-item fade-in" data-category="rooms">
+              <div
+                class="gallery-image"
+                style="background-image: url(../assets/img/room5.jpg)"
+              >
+                <div class="overlay">
+                  <a
+                    href="../assets/img/room5.jpg"
+                    class="lightbox-link"
+                    data-lightbox="gallery"
+                    title="Family Room"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </a>
+                </div>
+              </div>
+              <h3 class="gallery-title">Family Room</h3>
+            </div>
+
+            <!-- Dining -->
+            <div class="gallery-item fade-in hidden medium" data-category="dining">
+              <div
+                class="gallery-image"
+                style="background-image: url(../assets/img/dining.jpg)"
+              >
+                <div class="overlay">
+                  <a
+                    href="../assets/img/dining.jpg"
+                    class="lightbox-link"
+                    data-lightbox="gallery"
+                    title="Dining Area"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </a>
+                </div>
+              </div>
+              <h3 class="gallery-title">Fine Dining</h3>
+            </div>
+
+            <div class="gallery-item fade-in hidden" data-category="dining">
+              <div
+                class="gallery-image"
+                style="background-image: url(../assets/img/444042028.jpg)"
+              >
+                <div class="overlay">
+                  <a
+                    href="../assets/img/444042028.jpg"
+                    class="lightbox-link"
+                    data-lightbox="gallery"
+                    title="Restaurant"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </a>
+                </div>
+              </div>
+              <h3 class="gallery-title">Restaurant</h3>
+            </div>
+
+            <!-- Facilities -->
+            <div class="gallery-item fade-in hidden medium" data-category="facilities">
+              <div
+                class="gallery-image"
+                style="background-image: url(../assets/img/sittingroom3.jpg)"
+              >
+                <div class="overlay">
+                  <a
+                    href="../assets/img/sittingroom3.jpg"
+                    class="lightbox-link"
+                    data-lightbox="gallery"
+                    title="Sitting Room"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </a>
+                </div>
+              </div>
+              <h3 class="gallery-title">Sitting Room</h3>
+            </div>
+
+            <div class="gallery-item fade-in hidden large" data-category="facilities">
+              <div
+                class="gallery-image"
+                style="background-image: url(../assets/img/444041974.jpg)"
+              >
+                <div class="overlay">
+                  <a
+                    href="../assets/img/444041974.jpg"
+                    class="lightbox-link"
+                    data-lightbox="gallery"
+                    title="Lounge Area"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </a>
+                </div>
+              </div>
+              <h3 class="gallery-title">Lounge Area</h3>
+            </div>
+
+            <div class="gallery-item fade-in hidden medium" data-category="facilities">
+              <div
+                class="gallery-image"
+                style="background-image: url(../assets/img/444048466.jpg)"
+              >
+                <div class="overlay">
+                  <a
+                    href="../assets/img/444048466.jpg"
+                    class="lightbox-link"
+                    data-lightbox="gallery"
+                    title="Recreational Area"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </a>
+                </div>
+              </div>
+              <h3 class="gallery-title">Recreational Area</h3>
+            </div>
+
+            <!-- Exterior -->
+            <div class="gallery-item fade-in hidden large" data-category="exterior">
+              <div
+                class="gallery-image"
+                style="background-image: url(../assets/img/outside5.jpg)"
+              >
+                <div class="overlay">
+                  <a
+                    href="../assets/img/outside5.jpg"
+                    class="lightbox-link"
+                    data-lightbox="gallery"
+                    title="Exterior View"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </a>
+                </div>
+              </div>
+              <h3 class="gallery-title">Exterior View</h3>
+            </div>
+
+            <div class="gallery-item fade-in hidden" data-category="exterior">
+              <div
+                class="gallery-image"
+                style="background-image: url(../assets/img/outside.jpg)"
+              >
+                <div class="overlay">
+                  <a
+                    href="../assets/img/outside.jpg"
+                    class="lightbox-link"
+                    data-lightbox="gallery"
+                    title="Scenic Garden"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </a>
+                </div>
+              </div>
+              <h3 class="gallery-title">Scenic Garden</h3>
+            </div>
+
+            <div class="gallery-item fade-in hidden medium" data-category="exterior">
+              <div
+                class="gallery-image"
+                style="background-image: url(../assets/img/outsied3.jpg)"
+              >
+                <div class="overlay">
+                  <a
+                    href="../assets/img/outsied3.jpg"
+                    class="lightbox-link"
+                    data-lightbox="gallery"
+                    title="Property Overview"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </a>
+                </div>
+              </div>
+              <h3 class="gallery-title">Property Overview</h3>
+            </div>
+          </div>
+          <div class="view-more-container">
+            <button id="view-more-btn" class="btn-view-more">Load More Cards</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>
+            Auberge La Caverne is your home away from home in Rwanda. We offer
+            comfortable accommodations, authentic hospitality, and unforgettable
+            experiences in a serene mountain setting.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#bar">Bar</a></li>
+            <li><a href="#room">Room</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <p>Email: info@example.com</p>
+          <p>Phone: +1 234 567 890</p>
+          <p>Address: 123 Street, City, Country</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Your Company. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-btn">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/gallery.js"></script>
+  </body>
+</html>
