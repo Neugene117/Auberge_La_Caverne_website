@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
@@ -1070,4 +1073,144 @@ body {
 
 .modal-content::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.about-property-card {
+  display: flex;
+  align-items: stretch;
+  border-radius: 8px;
+  overflow: visible;
+  width: 100%;
+  position: relative;
+}
+
+.about-green-accent {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  width: 180px;
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 8px 0 0 8px;
+}
+
+.about-green-accent::after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  background: inherit;
+  transform: skewX(-10deg);
+}
+
+.about-image-container {
+  flex-shrink: 0;
+  width: 420px;
+  position: relative;
+  z-index: 1;
+  padding: 50px 0 50px 20px;
+  margin-left: -50px;
+}
+
+.about-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.about-content {
+  padding: 50px 40px;
+  flex: 1;
+}
+
+.about-badge {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 20px;
+}
+
+.about-description {
+  color: #636e72;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.about-features {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.about-features li {
+  color: #636e72;
+  font-size: 14px;
+  margin-bottom: 12px;
+  padding-left: 28px;
+  position: relative;
+}
+
+.about-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.about-btn {
+  background: var(--primary);
+  color: var(--light);
+  border: none;
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.about-btn:hover {
+  background: var(--secondary);
+}
+
+@media (max-width: 768px) {
+  .about-property-card {
+    flex-direction: column;
+  }
+
+  .about-green-accent {
+    width: 100%;
+    height: 60px;
+  }
+
+  .about-green-accent::after {
+    display: none;
+  }
+
+  .about-image-container {
+    width: 100%;
+    height: 300px;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-image-container img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  .about-content {
+    padding: 30px 25px;
+  }
 }
