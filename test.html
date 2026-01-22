@@ -3,210 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Room Detail - StarHotel</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <title>Property Section</title>
+    <style>
+        :root {
+            --primary: #1284c3;
+            --secondary: #e56825;
+            --dark: #000000;
+            --light: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #e8f5f3 0%, #f0f9f8 100%);
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .property-card {
+            display: flex;
+            align-items: stretch;
+            background: white;
+            border-radius: 8px;
+            overflow: visible;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            position: relative;
+        }
+
+        .green-accent {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            width: 180px;
+            flex-shrink: 0;
+            position: relative;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .green-accent::after {
+            content: '';
+            position: absolute;
+            right: -40px;
+            top: 0;
+            bottom: 0;
+            width: 100px;
+            background: inherit;
+            transform: skewX(-10deg);
+        }
+
+        .image-container {
+            flex-shrink: 0;
+            width: 420px;
+            position: relative;
+            z-index: 1;
+            padding: 50px 0 50px 20px;
+            margin-left: -50px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .content {
+            padding: 50px 40px;
+            flex: 1;
+        }
+
+        .badge {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        .description {
+            color: #636e72;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .features li {
+            color: #636e72;
+            font-size: 14px;
+            margin-bottom: 12px;
+            padding-left: 28px;
+            position: relative;
+        }
+
+        .features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .btn {
+            background: var(--primary);
+            color: var(--light);
+            border: none;
+            padding: 14px 32px;
+            font-size: 15px;
+            font-weight: 500;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: var(--secondary);
+        }
+
+        @media (max-width: 768px) {
+            .property-card {
+                flex-direction: column;
+            }
+
+            .green-accent {
+                width: 100%;
+                height: 60px;
+            }
+
+            .green-accent::after {
+                display: none;
+            }
+
+            .image-container {
+                width: 100%;
+                height: 300px;
+                padding: 0;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .image-container img {
+                max-width: 90%;
+                height: auto;
+            }
+
+            .content {
+                padding: 30px 25px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Hero Section with Breadcrumb -->
-    <div class="hero-section">
-        <div class="container">
-            <div class="breadcrumb">
-                <a href="#">Home</a> / <a href="#">Room list view</a> / <span>Room detail</span>
-            </div>
-            <h1>Room detail</h1>
-        </div>
-    </div>
-
-    <!-- Main Content -->
-    <div class="main-content">
-        <div class="container">
-            <div class="content-wrapper">
-                <!-- Left Section: Image Slider -->
-                <div class="left-section">
-                    <div class="image-slider">
-                        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&h=600&fit=crop" alt="Room" class="slider-image active">
-                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&h=600&fit=crop" alt="Room" class="slider-image">
-                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop" alt="Room" class="slider-image">
-                        <button class="slider-btn prev" onclick="changeSlide(-1)">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button class="slider-btn next" onclick="changeSlide(1)">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Right Section: Reservation Form -->
-                <div class="right-section">
-                    <div class="reservation-card">
-                        <h3>Reservation</h3>
-                        <div class="room-price">
-                            <span>Double Room</span>
-                            <span class="price"><span class="currency">€</span> 99.-</span>
-                            <span class="period">a night</span>
-                        </div>
-                        <form>
-                            <div class="form-group">
-                                <label>E-mail</label>
-                                <input type="email" placeholder="Please enter your E-mail">
-                            </div>
-                            <div class="form-group">
-                                <label>Check-in <i class="fas fa-info-circle"></i></label>
-                                <input type="text" placeholder="Check-in">
-                            </div>
-                            <div class="form-group">
-                                <label>Check-out <i class="fas fa-info-circle"></i></label>
-                                <input type="text" placeholder="Check-out">
-                            </div>
-                            <div class="form-group">
-                                <label>Guests</label>
-                                <input type="number" value="1" min="1">
-                            </div>
-                            <button type="button" class="book-btn">BOOK NOW</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Room Details Section -->
-            <h2 class="section-header">Room Details</h2>
+    <div class="container">
+        <div class="property-card">
+            <div class="green-accent"></div>
             
-            <div class="details-grid">
-                <div class="detail-section">
-                    <h4>Table overview</h4>
-                    <div class="amenities-list">
-                        <div class="amenity-item">
-                            <i class="fas fa-bed"></i>
-                            <span>Double Bed</span>
-                        </div>
-                        <div class="amenity-item">
-                            <i class="fas fa-wifi"></i>
-                            <span>Free Internet</span>
-                        </div>
-                        <div class="amenity-item">
-                            <i class="fas fa-newspaper"></i>
-                            <span>Free Newspaper</span>
-                        </div>
-                        <div class="amenity-item">
-                            <i class="fas fa-ruler"></i>
-                            <span>60 square meter</span>
-                        </div>
-                        <div class="amenity-item">
-                            <i class="fas fa-eye"></i>
-                            <span>Beach view</span>
-                        </div>
-                        <div class="amenity-item">
-                            <i class="fas fa-users"></i>
-                            <span>2 persons</span>
-                        </div>
-                        <div class="amenity-item">
-                            <i class="fas fa-bed"></i>
-                            <span>Double Bed</span>
-                        </div>
-                        <div class="amenity-item">
-                            <i class="fas fa-wifi"></i>
-                            <span>Free Internet</span>
-                        </div>
-                        <div class="amenity-item">
-                            <i class="fas fa-coffee"></i>
-                            <span>Breakfast included</span>
-                        </div>
-                        <div class="amenity-item">
-                            <i class="fas fa-door-open"></i>
-                            <span>Private Balcony</span>
-                        </div>
-                        <div class="amenity-item">
-                            <i class="fas fa-tv"></i>
-                            <span>Flat Screen TV</span>
-                        </div>
-                        <div class="amenity-item">
-                            <i class="fas fa-volume-up"></i>
-                            <span>Jacuzzi</span>
-                        </div>
-                    </div>
-                    <p class="description-text" style="margin-top: 20px;">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ligula nibh, cursus id euismod non, adipiscing nec nibh. Nam ac rhoncus fermentum, lorem dncia vulputate felis, id auctor mauris urna eget elama.
-                    </p>
-                </div>
-
-                <div class="detail-section">
-                    <h2 class="section-header">Overview</h2>
-                    
-                    <div class="tabs">
-                        <div class="tab active" onclick="switchTab('overview')">Overview</div>
-                        <div class="tab" onclick="switchTab('facilities')">Facilities</div>
-                        <div class="tab" onclick="switchTab('extra')">Extra</div>
-                    </div>
-
-                    <div class="tab-content active" id="overview-tab">
-                        <div class="overview-content">
-                            <div class="overview-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla eu posuere tincidunt. Aliquam gravida, justo in pellentesque tristique, sapien eros eleifend metus dapibus varius tortor mi. Nulla sapien leoreet nec gravida urna.</p>
-                                <p>Lorem ipsum dolor sed ante quam sed lobortis eu pellentesque mauris odio lacus. Nunc at pharetra eros, a viverra leo. Mauris et hendrerit justo. Mauris eleestias magna vitae nisl ultrices semper. Nam vitae sapien magna. Nam et orci nulla. Ut nec magna tortor. Nulla dolor sapien, laoreet nec lectus non, egestas nec lorem.</p>
-                            </div>
-                            <div class="overview-image">
-                                <img src="https://images.unsplash.com/photo-1559508551-44bff1de756b?w=300&h=200&fit=crop" alt="Breakfast">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tab-content" id="facilities-tab">
-                        <p class="description-text">Facilities content would go here...</p>
-                    </div>
-
-                    <div class="tab-content" id="extra-tab">
-                        <p class="description-text">Extra content would go here...</p>
-                    </div>
-                </div>
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="Luxury home with pool">
             </div>
-
-            <!-- Other Rooms Section -->
-            <h2 class="section-header">Other rooms</h2>
             
-            <div class="other-rooms">
-                <div class="room-card">
-                    <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=400&h=300&fit=crop" alt="Double bedroom">
-                    <div class="room-card-content">
-                        <div class="room-card-header">
-                            <h4>Double bedroom</h4>
-                            <div class="room-card-price">
-                                <span class="price"><span class="currency">€</span> 149</span>
-                                <span class="period">a night</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="room-card">
-                    <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=400&h=300&fit=crop" alt="King Size Bedroom">
-                    <div class="room-card-content">
-                        <div class="room-card-header">
-                            <h4>King Size Bedroom</h4>
-                            <div class="room-card-price">
-                                <span class="price"><span class="currency">€</span> 149</span>
-                                <span class="period">a night</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="room-card">
-                    <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=400&h=300&fit=crop" alt="Single room">
-                    <div class="room-card-content">
-                        <div class="room-card-header">
-                            <h4>Single room</h4>
-                            <div class="room-card-price">
-                                <span class="price"><span class="currency">€</span> 120</span>
-                                <span class="period">a night</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="content">
+                <h2 class="badge">About Us</h2>
+                <p class="description">
+                    Auberge La Caverne was born from a passion for hospitality and a deep love for Rwanda's natural beauty. Founded in 2010, our guesthouse has been welcoming travelers from around the world to experience the warmth of Rwandan hospitality combined with modern comfort and convenience.
+                </p>
+                <p class="description">
+                    Our journey is one of continuous improvement and dedication to creating memorable experiences. From our attentive staff to our thoughtfully designed rooms, we believe that exceptional hospitality is the foundation of a great stay.
+                </p>
+                
+                <button class="btn">Learn More</button>
             </div>
         </div>
     </div>
-
-    
 </body>
 </html>

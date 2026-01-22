@@ -3,22 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Room Detail - StarHotel</title>
+    <title>Room Detail - Auberge La Caverne</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="../assets/css/roomdetails.css" />
+    <link rel="stylesheet" href="../assets/css/header.css" />
   </head>
   <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="../index.html">
+            <img src="../assets/img/logo.png" alt="" srcset="" />
+          </a>
+        </div>
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./about.html">About Us</a></li>
+          <li class="dropdown">
+            <a href="./rooms.html"
+              >Services <i class="fas fa-chevron-down"></i
+            ></a>
+            <div class="dropdown-content">
+              <a href="./bar.html">Bar</a>
+              <a href="./rooms.html">Room</a>
+            </div>
+          </li>
+          <li><a href="./contactus.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
     <!-- Hero Section with Breadcrumb -->
     <div class="hero-section">
       <div class="container">
         <div class="breadcrumb">
-          <a href="#">Home</a> / <a href="#">Room list view</a> /
-          <span>Room detail</span>
+          <a href="../index.html">Home</a> /
+          <a href="./rooms.html">Our Rooms</a> /
+          <span>Room Detail</span>
         </div>
-        <h1>Room detail</h1>
+        <h1>Room Detail</h1>
       </div>
     </div>
 
@@ -30,17 +63,17 @@
           <div class="left-section">
             <div class="image-slider">
               <img
-                src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&h=600&fit=crop"
+                src="../assets/img/room1.jpg"
                 alt="Room"
                 class="slider-image active"
               />
               <img
-                src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&h=600&fit=crop"
+                src="../assets/img/room2.jpg"
                 alt="Room"
                 class="slider-image"
               />
               <img
-                src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop"
+                src="../assets/img/room5.jpg"
                 alt="Room"
                 class="slider-image"
               />
@@ -59,7 +92,8 @@
               <h3>Reservation</h3>
               <div class="room-price">
                 <span>Double Room</span>
-                <span class="price"><span class="currency">€</span> 99.-</span>
+                <span class="price"><span class="currency"></span> 25000</span>
+                RWF
                 <span class="period">a night</span>
               </div>
               <form>
@@ -69,11 +103,11 @@
                 </div>
                 <div class="form-group">
                   <label>Check-in <i class="fas fa-info-circle"></i></label>
-                  <input type="text" placeholder="Check-in" />
+                  <input type="date" />
                 </div>
                 <div class="form-group">
                   <label>Check-out <i class="fas fa-info-circle"></i></label>
-                  <input type="text" placeholder="Check-out" />
+                  <input type="date" />
                 </div>
                 <div class="form-group">
                   <label>Guests</label>
@@ -110,7 +144,7 @@
               </div>
               <div class="amenity-item">
                 <i class="fas fa-eye"></i>
-                <span>Beach view</span>
+                <span>Mountain view</span>
               </div>
               <div class="amenity-item">
                 <i class="fas fa-users"></i>
@@ -136,16 +170,13 @@
                 <i class="fas fa-tv"></i>
                 <span>Flat Screen TV</span>
               </div>
-              <div class="amenity-item">
-                <i class="fas fa-volume-up"></i>
-                <span>Jacuzzi</span>
-              </div>
             </div>
             <p class="description-text" style="margin-top: 20px">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              ligula nibh, cursus id euismod non, adipiscing nec nibh. Nam ac
-              rhoncus fermentum, lorem dncia vulputate felis, id auctor mauris
-              urna eget elama.
+              Our Double Room at Auberge La Caverne offers a comfortable and
+              spacious accommodation perfect for couples or small families
+              visiting Rwanda. Featuring a double bed, free Wi-Fi, and modern
+              amenities, this room provides a restful retreat after exploring
+              the scenic landscapes and cultural sites of Kigali and beyond.
             </p>
           </div>
 
@@ -166,19 +197,20 @@
               <div class="overview-content">
                 <div class="overview-text">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse interdum nulla eu posuere tincidunt. Aliquam
-                    gravida, justo in pellentesque tristique, sapien eros
-                    eleifend metus dapibus varius tortor mi. Nulla sapien
-                    leoreet nec gravida urna.
+                    Auberge La Caverne's Double Room is thoughtfully designed to
+                    provide you with the ultimate comfort during your stay in
+                    Rwanda. With modern furnishings, a cozy atmosphere, and
+                    attention to detail, this room ensures a restful night's
+                    sleep after a day of adventure in the beautiful Rwandan
+                    countryside.
                   </p>
                   <p>
-                    Lorem ipsum dolor sed ante quam sed lobortis eu pellentesque
-                    mauris odio lacus. Nunc at pharetra eros, a viverra leo.
-                    Mauris et hendrerit justo. Mauris eleestias magna vitae nisl
-                    ultrices semper. Nam vitae sapien magna. Nam et orci nulla.
-                    Ut nec magna tortor. Nulla dolor sapien, laoreet nec lectus
-                    non, egestas nec lorem.
+                    Enjoy the convenience of complimentary breakfast served
+                    daily, high-speed Wi-Fi throughout the property, and easy
+                    access to our on-site bar for evening relaxation. The room's
+                    private balcony offers breathtaking mountain views, making
+                    it an ideal spot for unwinding and taking in the serene
+                    natural beauty that surrounds our guesthouse.
                   </p>
                 </div>
                 <div class="overview-image">
@@ -192,12 +224,26 @@
 
             <div class="tab-content" id="facilities-tab">
               <p class="description-text">
-                Facilities content would go here...
+                Our Double Room includes a range of modern facilities to ensure
+                your comfort: en-suite bathroom with hot water, complimentary
+                Wi-Fi, flat-screen TV, private balcony with mountain views, and
+                daily housekeeping service. Additional amenities available
+                throughout the property include our restaurant serving Rwandan
+                and international cuisine, a well-stocked bar, and laundry
+                services.
               </p>
             </div>
 
             <div class="tab-content" id="extra-tab">
-              <p class="description-text">Extra content would go here...</p>
+              <p class="description-text">
+                For special requests or additional services, please contact our
+                concierge team. We offer airport transfers, guided tours of
+                Kigali and nearby attractions, and can arrange transportation
+                for gorilla trekking or other excursions. Children under 12 stay
+                free when sharing with parents, and we provide cribs upon
+                request. Our flexible check-in and check-out times ensure a
+                stress-free experience.
+              </p>
             </div>
           </div>
         </div>
@@ -225,11 +271,9 @@
               </div>
 
               <div class="card-details">
+               
                 <div class="detail-item">
-                  <button class="btn-read-more">Book Now</button>
-                </div>
-                <div class="detail-item">
-                  <button class="btn-read-more">Read More</button>
+                  <a href="roomdetails.html" class="btn-read-more">Read More</a>
                 </div>
               </div>
             </div>
@@ -254,11 +298,9 @@
               </div>
 
               <div class="card-details">
+               
                 <div class="detail-item">
-                  <button class="btn-read-more">Book Now</button>
-                </div>
-                <div class="detail-item">
-                  <button class="btn-read-more">Read More</button>
+                  <a href="roomdetails.html" class="btn-read-more">Read More</a>
                 </div>
               </div>
             </div>
@@ -283,11 +325,9 @@
               </div>
 
               <div class="card-details">
+               
                 <div class="detail-item">
-                  <button class="btn-read-more">Book Now</button>
-                </div>
-                <div class="detail-item">
-                  <button class="btn-read-more">Read More</button>
+                  <a href="roomdetails.html" class="btn-read-more">Read More</a>
                 </div>
               </div>
             </div>
@@ -295,6 +335,47 @@
         </div>
       </div>
     </div>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>
+            Auberge La Caverne is your home away from home in Rwanda. We offer
+            comfortable accommodations, authentic hospitality, and unforgettable
+            experiences in a serene mountain setting.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#bar">Bar</a></li>
+            <li><a href="#room">Room</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <p>Email: info@example.com</p>
+          <p>Phone: +1 234 567 890</p>
+          <p>Address: 123 Street, City, Country</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Your Company. All rights reserved.</p>
+      </div>
+    </footer>
+    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-btn">
+      <i class="fab fa-whatsapp"></i>
+    </a>
     <script src="../assets/js/roomdetails.js"></script>
+    <script src="../assets/js/header.js"></script>
   </body>
 </html>

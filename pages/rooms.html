@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="../assets/css/header.css" />
     <link rel="stylesheet" href="../assets/css/index.css" />
+    <link rel="stylesheet" href="../assets/css/room.css" />
   </head>
   <body>
     <!-- Header -->
@@ -82,7 +83,9 @@
                   <button class="btn-read-more">Book Now</button>
                 </div>
                 <div class="detail-item">
-                  <button class="btn-read-more">Read More</button>
+                  <a href="./roomdetails.html" class="btn-read-more"
+                    >Read More</a
+                  >
                 </div>
               </div>
             </div>
@@ -111,7 +114,9 @@
                   <button class="btn-read-more">Book Now</button>
                 </div>
                 <div class="detail-item">
-                  <button class="btn-read-more">Read More</button>
+                  <a href="./roomdetails.html" class="btn-read-more"
+                    >Read More</a
+                  >
                 </div>
               </div>
             </div>
@@ -140,7 +145,9 @@
                   <button class="btn-read-more">Book Now</button>
                 </div>
                 <div class="detail-item">
-                  <button class="btn-read-more">Read More</button>
+                  <a href="./roomdetails.html" class="btn-read-more"
+                    >Read More</a
+                  >
                 </div>
               </div>
             </div>
@@ -148,7 +155,7 @@
 
           <!-- Card 4 -->
           <div
-            class="property-card fade-in stagger-animation"
+            class="property-card fade-in stagger-animation hidden"
             style="--stagger-delay: 4"
           >
             <div class="card-image">
@@ -169,7 +176,9 @@
                   <button class="btn-read-more">Book Now</button>
                 </div>
                 <div class="detail-item">
-                  <button class="btn-read-more">Read More</button>
+                  <a href="./roomdetails.html" class="btn-read-more"
+                    >Read More</a
+                  >
                 </div>
               </div>
             </div>
@@ -177,7 +186,7 @@
 
           <!-- Card 5 -->
           <div
-            class="property-card fade-in stagger-animation"
+            class="property-card fade-in stagger-animation hidden"
             style="--stagger-delay: 5"
           >
             <div class="card-image">
@@ -198,7 +207,9 @@
                   <button class="btn-read-more">Book Now</button>
                 </div>
                 <div class="detail-item">
-                  <button class="btn-read-more">Read More</button>
+                  <a href="./roomdetails.html" class="btn-read-more"
+                    >Read More</a
+                  >
                 </div>
               </div>
             </div>
@@ -206,7 +217,7 @@
 
           <!-- Card 6 -->
           <div
-            class="property-card fade-in stagger-animation"
+            class="property-card fade-in stagger-animation hidden"
             style="--stagger-delay: 6"
           >
             <div class="card-image">
@@ -227,15 +238,118 @@
                   <button class="btn-read-more">Book Now</button>
                 </div>
                 <div class="detail-item">
-                  <button class="btn-read-more">Read More</button>
+                  <a href="./roomdetails.html" class="btn-read-more"
+                    >Read More</a
+                  >
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div class="view-more-container">
+          <button id="view-more-btn" class="btn-primary">View More</button>
+        </div>
       </div>
     </section>
 
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Book Your Room</h2>
+        <form class="booking-form">
+          <div class="booking-field">
+            <label>Email</label>
+            <input
+              type="email"
+              placeholder="Please enter your E-mail"
+              required
+            />
+          </div>
+          <div class="booking-field">
+            <label
+              >Room Type
+              <i
+                class="fas fa-info-circle"
+                style="font-size: 11px; color: #ccc"
+              ></i
+            ></label>
+            <select required>
+              <option>Select a room</option>
+              <option>Double Bedroom</option>
+              <option>King Size Bedroom</option>
+              <option>Single Room</option>
+            </select>
+          </div>
+          <div class="booking-field">
+            <label
+              >Check-in
+              <i
+                class="fas fa-info-circle"
+                style="font-size: 11px; color: #ccc"
+              ></i
+            ></label>
+            <input type="date" required />
+          </div>
+          <div class="booking-field">
+            <label
+              >Check-out
+              <i
+                class="fas fa-info-circle"
+                style="font-size: 11px; color: #ccc"
+              ></i
+            ></label>
+            <input type="date" required />
+          </div>
+          <div class="booking-field">
+            <label>Guests</label>
+            <input type="number" min="1" value="1" required />
+          </div>
+          <button type="submit" class="btn-book">Submit Booking</button>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>
+            Auberge La Caverne is your home away from home in Rwanda. We offer
+            comfortable accommodations, authentic hospitality, and unforgettable
+            experiences in a serene mountain setting.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#bar">Bar</a></li>
+            <li><a href="#room">Room</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <p>Email: info@example.com</p>
+          <p>Phone: +1 234 567 890</p>
+          <p>Address: 123 Street, City, Country</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Your Company. All rights reserved.</p>
+      </div>
+    </footer>
+    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-btn">
+      <i class="fab fa-whatsapp"></i>
+    </a>
     <script src="../assets/js/header.js"></script>
     <script src="../assets/js/index.js"></script>
   </body>

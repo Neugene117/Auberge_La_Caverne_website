@@ -49,6 +49,53 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
+// View More functionality for rooms page
+let isExpanded = false;
+const viewMoreBtn = document.getElementById("view-more-btn");
+if (viewMoreBtn) {
+  viewMoreBtn.addEventListener("click", () => {
+    const hiddenCards = document.querySelectorAll(".property-card.hidden");
+    if (!isExpanded) {
+      hiddenCards.forEach((card) => card.classList.remove("hidden"));
+      viewMoreBtn.textContent = "View Less";
+      isExpanded = true;
+    } else {
+      hiddenCards.forEach((card) => card.classList.add("hidden"));
+      viewMoreBtn.textContent = "View More";
+      isExpanded = false;
+    }
+  });
+}
+
+// Modal functionality
+const modal = document.getElementById("booking-modal");
+const bookNowBtns = document.querySelectorAll(".btn-read-more");
+const closeBtn = document.querySelector(".close");
+
+if (bookNowBtns.length > 0 && modal) {
+  bookNowBtns.forEach((btn) => {
+    if (btn.textContent.trim() === "Book Now") {
+      btn.addEventListener("click", () => {
+        modal.style.display = "block";
+      });
+    }
+  });
+}
+
+if (closeBtn && modal) {
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+}
+
+if (modal) {
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+}
+
 // Observe all animated elements
 document.addEventListener("DOMContentLoaded", () => {
   const animatedElements = document.querySelectorAll(

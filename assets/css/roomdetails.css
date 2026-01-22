@@ -11,6 +11,9 @@
   box-sizing: border-box;
 }
 
+a{
+  text-decoration: none;
+}
 body {
   font-family: "Arial", sans-serif;
   color: #333;
@@ -19,9 +22,12 @@ body {
 
 /* Breadcrumb Hero Section */
 .hero-section {
-  background: linear-gradient(135deg, var(--primary) 0%, #0d6ba3 100%);
+  background:
+    linear-gradient(135deg, var(--primary) 0%, #0d6ca34c 100%),
+    url("../img/sittingroom3.jpg");
   padding: 60px 0 40px;
   position: relative;
+  margin-top: 40px;
 }
 
 .hero-section::before {
